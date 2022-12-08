@@ -1,0 +1,50 @@
+.home-top {
+	background-image: url("CasieBarieDev.github.io/Images/code background.jpg");
+	background-position: top center;
+	background-attachment: scroll;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+}
+#home-logo {
+	position: absolute;
+	top: 50vh;
+	left: 50%;
+	width: 80vh;
+	height: 80vh;
+	margin-top: -40vh;
+	margin-left: -40vh;
+}
+
+#down-button:hover {transition: opacity 0.2s linear; opacity: .5; cursor: pointer;}
+#down-button span {
+	position: absolute;
+	left: 50%;
+	top: 90vh;
+	width: 3vh;
+	height: 3vh;
+	margin-left: -1.6vh;
+	border-left: .5vh solid rgba(255, 255, 255, .5);
+	border-bottom: .5vh solid rgba(255, 255, 255, .5);
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	box-sizing: border-box;
+}
+
+H1 {
+	text-align: center;
+	padding: 4vh 0 0 0;
+	font-family: monospace;
+}
+
+p {
+	text-align: center;
+	font-size: large;
+	font-family: monospace;
+}
+
+h2 {
+	text-align: center;
+	padding: 4vh 0 0 0;
+	font-family: monospace;
+}

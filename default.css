@@ -1,0 +1,50 @@
+:root {
+    --primary-color: #d679ff;
+    --secondary-color: #818cab;
+    --font-color: #ffffff;
+
+    --bg-color-1: #2a2a2a;
+    --bg-color-2: #272727;
+
+    --gray-color: #414141;
+    --nav-bg-color: black;
+    --nav-font-color: white;
+}
+
+[data-theme="light"] {
+    --primary-color: #aa00ff;
+    --secondary-color: #536390;
+    --font-color: black;
+
+    --bg-color-1: white;
+    --bg-color-2: white;
+
+    --gray-color: #cccccc;
+    --nav-bg-color: #f2f2f2;
+    --nav-font-color: black;
+}
+
+* {margin: 0; scroll-behavior: smooth;}
+::-webkit-scrollbar {width: 1.3vh;}
+::-webkit-scrollbar-track {background: var(--nav-bg-color); transition: background .4s ease-in-out;}
+::-webkit-scrollbar-thumb {background: var(--gray-color); transition: background .4s ease-in-out; border-radius: 1.3vh;}
+body{
+    background: var(--bg-color-1);
+    transition: color .4s ease-in-out, background .4s ease-in-out;
+    color: var(--font-color);
+    animation: transitionIn 0.76s;
+    overflow-anchor: none;
+    box-sizing: border-box;
+}
+#everything {position: relative; min-height: 100vh;}
+#wrap {flex: 1;}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    } to {
+          opacity: 1;
+          transform: rotateX(0);
+      }
+}
