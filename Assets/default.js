@@ -19,7 +19,7 @@ $(document).ready(function() {
 
 $(document).scroll(function() {
     const scroll = $(window).scrollTop();
-    $("#scroll").css("background-position", "0%" + (scroll / 30) + "vh");
+    $("#scroll").css("background-position", "50%" + (scroll / 30) + "vh");
 });
 
 function changeOpacity(element, cssname, varcolor, opacity) {

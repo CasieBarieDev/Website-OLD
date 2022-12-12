@@ -1,5 +1,5 @@
 .home-top {
-	background-image: url("Images/code background.jpg");
+	background-image: url("Images/code-background.webp");
 	background-position: top center;
 	background-attachment: scroll;
 	background-size: cover;
@@ -18,12 +18,10 @@
 	max-height: 550px;
 	max-width: 550px;
 }
-
 H1 {
 	text-align: center;
 	padding: 4vh 0 0 0;
 }
-
 p {
 	text-align: center;
 	font-size: large;

@@ -20,12 +20,12 @@ footer .socials a {
 	opacity: 0.75;
 }
 
-/* GITHUB */ footer .socials a:nth-child(1):hover {color: #fafafa; text-shadow: 0 0 10px #fafafa, 0 0 20px #fafafa, 0 0 30px #fafafa;}
-/* PAYPAL */ footer .socials a:nth-child(2):hover {color: #0099cc; text-shadow: 0 0 10px #0099cc, 0 0 20px #0099cc, 0 0 30px #0099cc;}
-/* YOUTUBE */ footer .socials a:nth-child(3):hover {color: #bb0000; text-shadow: 0 0 10px #bb0000, 0 0 20px #bb0000, 0 0 30px #bb0000;}
-/* INSTAGRAM */ footer .socials a:nth-child(4):hover {color: #d62976; text-shadow: 0 0 10px #d62976, 0 0 20px #d62976, 0 0 30px #d62976;}
-/* SPIGOT */ footer .socials a:nth-child(5):hover {color: #dec91a; text-shadow: 0 0 10px #dec91a, 0 0 20px #dec91a, 0 0 30px #dec91a;}
-/* DISCORD */ footer .socials a:nth-child(6):hover {color: #5865F2; text-shadow: 0 0 10px #5865F2, 0 0 20px #5865F2, 0 0 30px #5865F2;}
+/* GITHUB */footer .socials a:nth-child(1):hover {color: #fafafa; text-shadow: 0 0 10px #fafafa, 0 0 20px #fafafa, 0 0 30px #fafafa;}
+/* PAYPAL */footer .socials a:nth-child(2):hover {color: #0099cc; text-shadow: 0 0 10px #0099cc, 0 0 20px #0099cc, 0 0 30px #0099cc;}
+/* YOUTUBE */footer .socials a:nth-child(3):hover {color: #bb0000; text-shadow: 0 0 10px #bb0000, 0 0 20px #bb0000, 0 0 30px #bb0000;}
+/* INSTAGRAM */footer .socials a:nth-child(4):hover {color: #d62976; text-shadow: 0 0 10px #d62976, 0 0 20px #d62976, 0 0 30px #d62976;}
+/* SPIGOT */footer .socials a:nth-child(5):hover {color: #dec91a; text-shadow: 0 0 10px #dec91a, 0 0 20px #dec91a, 0 0 30px #dec91a;}
+/* DISCORD */footer .socials a:nth-child(6):hover {color: #5865F2; text-shadow: 0 0 10px #5865F2, 0 0 20px #5865F2, 0 0 30px #5865F2;}
 
 footer .copyright {
 	margin-top: 10px;

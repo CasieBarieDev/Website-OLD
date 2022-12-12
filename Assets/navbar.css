@@ -4,7 +4,6 @@ body {
 	box-sizing: border-box;
 	font-family: Bahnschrift, serif;
 }
-
 nav {
 	transition: color .4s ease-in-out, background-color .4s ease-in-out, box-shadow .4s ease-in-out;
 	position: fixed;

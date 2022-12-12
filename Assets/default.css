@@ -13,9 +13,7 @@
     --nav-font-color: rgb(255, 255, 255);
 }
 
-* {
-    margin: 0; scroll-behavior: smooth;
-}
+* {margin: 0; scroll-behavior: smooth;}
 ::-webkit-scrollbar {width: 1.3vh;}
 ::-webkit-scrollbar-track {background: var(--nav-bg-color); transition: background .4s ease-in-out;}
 ::-webkit-scrollbar-thumb {background: var(--gray-color); transition: background .4s ease-in-out; border-radius: 1.3vh;}
@@ -37,7 +35,7 @@ html, body {
 #down-button span {
     position: absolute;
     left: 50%;
-    top: 90vh;
+    top: 85vh;
     width: 3vh;
     height: 3vh;
     margin-left: -1.6vh;
