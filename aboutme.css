@@ -1,0 +1,28 @@
+.home-top {
+	background-image: url("Images/profilepic.jpg");
+	background-position: top center;
+	background-attachment: scroll;
+	background-size: cover;
+	height: 100vh;
+	max-width: 100%;
+}
+
+.home-top-text {
+	top: 15vh;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	font-size: 50px;
+	color: white;
+	text-shadow: black 1px 1px 1px;
+}
+.home-top-text h4 {
+	font-size: 25px;
+	color: salmon;
+}
+.home-top-text p {font-size: 20px;}
+.home-top-text p a {
+	color: whitesmoke;
+	text-decoration: none;
+}
+.home-top-text p a:hover {color: antiquewhite;}

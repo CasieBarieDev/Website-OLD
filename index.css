@@ -4,47 +4,40 @@
 	background-attachment: scroll;
 	background-size: cover;
 	height: 100vh;
-	width: 100%;
+	max-width: 100%;
 }
 #home-logo {
+	top: 3vh;
+	text-align: center;
 	position: absolute;
-	top: 50vh;
-	left: 50%;
-	width: 80vh;
-	height: 80vh;
-	margin-top: -40vh;
-	margin-left: -40vh;
-}
-
-#down-button:hover {transition: opacity 0.2s linear; opacity: .5; cursor: pointer;}
-#down-button span {
-	position: absolute;
-	left: 50%;
-	top: 90vh;
-	width: 3vh;
-	height: 3vh;
-	margin-left: -1.6vh;
-	border-left: .5vh solid rgba(255, 255, 255, .5);
-	border-bottom: .5vh solid rgba(255, 255, 255, .5);
-	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	box-sizing: border-box;
+	margin-left: 50%;
+	margin-top: calc((50vh - 30vh)/2);
+	transform: translate(-50%);
+	width: 80%;
+	height: auto;
+	max-height: 550px;
+	max-width: 550px;
 }
 
 H1 {
 	text-align: center;
 	padding: 4vh 0 0 0;
-	font-family: monospace;
 }
 
 p {
 	text-align: center;
 	font-size: large;
-	font-family: monospace;
+	color: var(--font-color-gray);
 }
-
-h2 {
-	text-align: center;
-	padding: 4vh 0 0 0;
-	font-family: monospace;
+p a {
+	color: var(--font-color-gray);
+	text-decoration: none;
+}
+p a:hover {color: var(--font-color-gray-highlight);}
+h2 {text-align: center;}
+#top-langs {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
 }

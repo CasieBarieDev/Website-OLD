@@ -14,9 +14,9 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--nav-bg-color);
-	color: var(--nav-font-color);
+	color: var(--nav-bg-color);
 	padding: 5px 15px;
-	box-shadow: 0 0 5px 3px var(--nav-bg-color);
+	box-shadow: 0 0 5px 3px;
 }
 
 .Logo a {
@@ -60,9 +60,6 @@ nav {
 	bottom: -3px;
 	transition: 0.75s;
 }
-
-.theme-switch input {display: none;}
-.theme-switch div {min-width: 30px; cursor: pointer;}
 
 .hamburger {
 	display: block;
@@ -122,10 +119,7 @@ nav {
 	transition: 0.3s;
 }
 .mobile-item:hover {background-color: var(--secondary-color);}
-.mobile-item.current {text-decoration: underline !important; text-underline-position: under;}
-.theme-switch-icon:hover {color: var(--secondary-color);}
+.mobile-item.current {text-decoration: underline var(--secondary-color) !important; text-underline-position: under;}
 
-@media (min-width: 965px) {
-	.mobile-menu, .hamburger {display: none;}
-	.menu {display: flex;}
-}
+@media (min-width: 965px) {.mobile-menu, .hamburger {display: none;} .menu {display: flex;}}
+@media (max-width: 420px) {.Logo a {font-size: 20px;}}

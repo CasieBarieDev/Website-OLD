@@ -2,37 +2,33 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>CasieBarie Development | Home</title>
-	<link href="Images/CasieBarie%20Pose.png" rel="icon">
+	<title>CasieBarie Development</title>
+	<link href="/Images/CasieBarie%20Pose.png" rel="icon">
 	<link href="index.css" rel="stylesheet" type="text/css"/>
-	<link href="default.css" rel="stylesheet" type="text/css"/>
+	<link href="/Assets/default.css" rel="stylesheet" type="text/css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-	<script src="default.js"></script>
+	<script src="/Assets/default.js"></script>
 </head>
 <body class="Home" id="body" data-currentnav="Home">
 <div id="everything">
 	<div id="wrap">
-		<div data-include="NavAndFooter/navbar"></div>
-		<!-- PAGINA -->
+		<div data-include="/Assets/navbar"></div>
 		<div id="page">
 			<div class="home-top" id="scroll"></div>
-			<img alt="logo" class="base-element" id="home-logo" src="Images/LOGO-removebg.png"/>
-			<a id="down-button" onclick="window.scroll(0,500);"><span></span></a>
-
-			<h1>Welcome, here you can find almost all the things I develop!</h1>
-			<p>I mainly focus on Minecraft Spigot plugins. But sometimes I decide to make something else.</p>
-			<h2>LANGUAGES I UNDERSTAND (A LITTLE)</h2>
-			<h4></h4>
-			<h3>SOME EXTRA NOTES:</h3>
-			<ul>
-				<li>For each Minecraft plugin there will be a installation guide and info about the configuration
-					files.
-				</li>
-				<li>All the projects will have a preview or a download link on the page.</li>
-				<li>Please donate your CPU/GPU to research!</li>
-			</ul>
+			<img alt="logo" class="base-element" id="home-logo" src="Images/LOGO-removebg.png" height="500" width="100"/>
+			<a id="down-button" onclick="window.scroll(0,800);"><span></span></a>
+			<h1>👋 Welcome, here you can find almost all the things I develop!</h1>
+			<p>
+				I mainly focus on <a href="/">Minecraft Spigot plugins</a>. But sometimes I decide to make something else.<br>
+				For each Minecraft plugin there will be a installation guide and info about the configuration files.<br>
+				All the projects will have a preview or a download link on the page.<br>
+			</p>
+			<hr class="rounded">
+			<h2>🧬 Languages 🧬</h2>
+			<img id="top-langs" alt="top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=casiebarie&layout=compact&theme=github_dark&langs_count=10&hide_border=true&bg_color=1c1c1c&hide_title=true&card_width=450"/>
+			<hr class="rounded">
 		</div>
 	</div>
-	<div data-include="NavAndFooter/footer"></div>
+	<div data-include="/Assets/footer"></div>
 </div>
 </body>

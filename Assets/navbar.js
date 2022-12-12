@@ -7,35 +7,20 @@ $(document).ready(function() {
         mobile_menu.classList.toggle('is-open');
     })
 
-    //Darkmode Switch
-    let darkSwitches = $('.theme-switch input[type="checkbox"]');
-    let darkIcons = $('.theme-switch-icon');
-    darkSwitches.change(function (e) {
-        if(e.target.checked) {
-            document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-            changeDarkIcon(true);
+    //Transparant On Scroll
+    $(window).scroll(function () {scrolled();})
+    function scrolled() {
+        const nav = $('nav');
+        if($(window).scrollTop() > 50) {
+            changeOpacity(nav, 'color', '--nav-bg-color', .7);
+            changeOpacity(nav, 'background-color', '--nav-bg-color', .7);
         } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-            changeDarkIcon(false)
-        }
-    })
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-    if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        if (currentTheme === 'light') {darkSwitches.prop('checked', true); changeDarkIcon(true)}
-    }
-    function changeDarkIcon(isChecked) {
-        if(isChecked) {
-            darkIcons.removeClass("fa-solid fa-moon theme-switch-icon");
-            darkIcons.addClass("fa-solid fa-sun theme-switch-icon");
-        } else {
-            darkIcons.removeClass("fa-solid fa-sun theme-switch-icon");
-            darkIcons.addClass("fa-solid fa-moon theme-switch-icon");
+            changeOpacity(nav, 'color', '--nav-bg-color', 1);
+            changeOpacity(nav, 'background-color', '--nav-bg-color', 1);
         }
     }
 
+    //Moving Highlight Line
     $(window).resize(function() {
         $('.menu-item').hover(function() {
             const $thisnav = $('.current').offset().left;

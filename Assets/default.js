@@ -21,3 +21,9 @@ $(document).scroll(function() {
     const scroll = $(window).scrollTop();
     $("#scroll").css("background-position", "0%" + (scroll / 30) + "vh");
 });
+
+function changeOpacity(element, cssname, varcolor, opacity) {
+    const current_color = getComputedStyle(document.documentElement).getPropertyValue(varcolor);
+    const match = /rgba?\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(,\s*\d+[.\d+]*)*\)/g.exec(current_color);
+    element.css(cssname, "rgba(" + [match[1],match[2],match[3],opacity].join(',') +")");
+}
