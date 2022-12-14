@@ -108,7 +108,7 @@ nav {
 	opacity: 1;
 	transform: translateY(0);
 }
-.mobile-menu a {
+.mobile-menu span {
 	display: block;
 	padding: 16px;
 	color: var(--nav-font-color);

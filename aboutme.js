@@ -1,5 +1,5 @@
 jQuery(function ($) {
-    const $inputs = $("input[name=Discord],input[name='Email Address']");
+    const $inputs = $("input[name=Discord],input[name='Email']");
     $inputs.on('input', function () {
         $inputs.not(this).prop('required', !$(this).val().length || !(this).checkValidity());
     });
@@ -14,14 +14,11 @@ for(let form of allForm) {
        } else {
            this.classList.add('invalid');
            this.classList.remove('valid');
-       }
-       if(this.value === '') {
+       } if(this.value === '') {
            this.classList.remove('valid');
            this.classList.remove('invalid');
-       }
+       } checkForm();
     });
-    form.addEventListener('keyup', checkForm);
-    form.addEventListener('keydown', checkForm)
 }
 
 function checkForm() {
