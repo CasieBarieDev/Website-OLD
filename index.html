@@ -2,13 +2,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-
 	<title>CasieBarie Development</title>
 	<link href="/Images/CasieBarie-Pose.webp" rel="icon">
 	<link href="index.css" rel="stylesheet" type="text/css"/>
 	<link href="/Assets/default.css" rel="stylesheet" type="text/css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-	<script src="/Assets/default.js"></script>
 </head>
 <body class="Home" id="body" data-currentnav="Home">
 <div id="everything">
@@ -20,7 +18,7 @@
 			<a id="down-button" onclick="window.scroll(0,800);"><span></span></a>
 			<h1>👋 Welcome, here you can find almost all the things I develop!</h1>
 			<p>
-				I mainly focus on <a href="/">Minecraft Spigot plugins</a>. But sometimes I decide to make something else.<br>
+				I mainly focus on <span onclick="transitionToPage('/')">Minecraft Spigot plugins</span>. But sometimes I decide to make something else.<br>
 				For each Minecraft plugin there will be a installation guide and info about the configuration files.<br>
 				All the projects will have a preview or a download link on the page.<br>
 			</p>
@@ -32,4 +30,5 @@
 	</div>
 	<div data-include="/Assets/footer"></div>
 </div>
+<script defer src="/Assets/default.js"></script>
 </body>

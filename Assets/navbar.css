@@ -20,7 +20,7 @@ nav {
 
 .Logo a {
 	float: left;
-	color: rgb(215, 90, 0);
+	color: var(--logo-color);
 	text-decoration: none;
 	font-family: "source-code-pro", serif;
 	font-size: 26px;
@@ -41,14 +41,14 @@ nav {
 	margin: 0 10px;
 	position: relative;
 }
-.menu a {
+.menu span{
 	margin: 0 20px;
 	color: var(--nav-font-color);
 	text-decoration: none;
 	transition: 0.3s;
 	font-weight: bolder;
 }
-.menu a:hover {color: var(--secondary-color);}
+.menu span:hover{color: var(--secondary-color); cursor: pointer;}
 .menu-item {position: relative;}
 .wee {
 	height: 2px;

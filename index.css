@@ -27,11 +27,11 @@ p {
 	font-size: large;
 	color: var(--font-color-gray);
 }
-p a {
+p span {
 	color: var(--font-color-gray);
 	text-decoration: none;
 }
-p a:hover {color: var(--font-color-gray-highlight);}
+p span:hover {color: var(--font-color-gray-highlight); cursor: pointer;}
 h2 {text-align: center;}
 #top-langs {
 	display: block;

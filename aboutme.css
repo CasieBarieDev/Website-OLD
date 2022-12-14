@@ -13,16 +13,147 @@
 	text-align: center;
 	width: 100%;
 	font-size: 50px;
-	color: white;
-	text-shadow: black 1px 1px 1px;
+	color: var(--font-color);
+	text-shadow: var(--font-color-invert) 1px 1px 1px;
 }
 .home-top-text h4 {
 	font-size: 25px;
-	color: salmon;
+	color: var(--logo-color);
 }
 .home-top-text p {font-size: 20px;}
 .home-top-text p a {
-	color: whitesmoke;
+	color: var(--font-color);
 	text-decoration: none;
 }
-.home-top-text p a:hover {color: antiquewhite;}
+.home-top-text p a:hover {color: var(--font-color-highlight);}
+
+form {
+	background: var(--bg-color-2);
+	padding: 20px;
+	border-radius: 16px;
+	max-width: 676px;
+	margin: 20px auto;
+	display: block;
+}
+form h2 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 600;
+	margin-bottom: 26px;
+}
+form .form-inline {
+	display: grid;
+	grid-template-columns: 1fr .05fr 1fr;
+	grid-gap: 16px;
+}
+form .form-inline p {
+	text-align: center;
+	margin-top: 10px;
+	color: var(--font-color-gray);
+}
+form .form {
+	position: relative;
+	width: 100%;
+	margin-bottom: 16px;
+}
+form .form input,
+/*TEST*/form .form select,
+form .form textarea {
+	padding: 8px;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 9px;
+	border: 2px solid var(--gray-color);
+	background: var(--bg-color-2);
+	color: var(--font-color);
+	transition: top .3s ease;
+}
+form .form label {
+	position: absolute;
+	top: 50%;
+	left: 8px;
+	color: var(--font-color-gray);
+	transform: translateY(-50%);
+	padding: 0 2px;
+	transition: top .3s ease;
+}
+form .form textarea ~ label {
+	top: 8px;
+	transform: unset;
+}
+form .form textarea {resize: vertical;}
+
+form .form input.invalid ~ label,
+form .form select.invalid ~ label,
+form .form textarea.invalid ~ label,
+form .form input.valid ~ label,
+form .form select.valid ~ label,
+form .form textarea.valid ~ label,
+form .form input:focus ~ label,
+form .form select:focus ~ label,
+form .form textarea:focus ~ label {
+	top: -10px;
+	font-size: 13px;
+	font-weight: 500;
+	background: var(--bg-color-2);
+	transform: unset;
+}
+form .form input.valid ~ label,
+form .form select.valid ~ label,
+form .form textarea.valid ~ label {color: var(--primary-color);}
+form .form input.valid,
+form .form select.valid,
+form .form textarea.valid {border-color: var(--secondary-color);}
+form .form input.invalid ~ label,
+form .form select.invalid ~ label,
+form .form textarea.invalid ~ label {color: red;}
+form .form input.invalid,
+form .form select.invalid,
+form .form textarea.invalid {border-color: red;}
+
+form button {
+	padding: 10px 30px;
+	background: transparent;
+	color: var(--font-color-gray);
+	border: 2px solid var(--gray-color);
+	border-radius: 9px;
+	cursor: pointer;
+	width: 100%;
+}
+form button:enabled {
+	color: var(--primary-color);
+	border-color: var(--secondary-color);
+
+}
+form button:enabled:hover {
+	transition: color 0.3s, background-color 0.3s;
+	background-color: var(--primary-color);
+	color: var(--font-color);
+}
+
+form .form input ~ label .required {color: var(--font-color-gray)}
+form .form textarea:required ~ label .required,
+form .form select:required ~ label .required,
+form .form input:required ~ label .required {color: red;}
+
+form .form select option {
+	background-color: var(--bg-color-2);
+	color: var(--font-color-gray);
+}
+
+:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px var(--bg-color-2) inset !important;
+	-webkit-text-fill-color: var(--font-color);
+	caret-color: var(--font-color);
+}
+::-webkit-validation-bubble-message { display: none; }
+@media screen and (max-width: 480px) {
+	form .form-inline {
+		grid-gap: unset;
+		grid-template-columns: 1fr;
+	}
+	form .form-inline p {
+		margin-top: 0;
+		margin-bottom: 13px;
+	}
+}
