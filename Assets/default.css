@@ -35,7 +35,7 @@ body {
     opacity: 0;
 }
 #everything {position: relative; min-height: 100vh; width: 100%;}
-#page {font-family: monospace; margin-bottom: 10px}
+#page {font-family: monospace; margin-bottom: 10px; min-height: calc(100vh - 150px)}
 #wrap {flex: 1;}
 #down-button:hover {transition: opacity 0.2s linear; opacity: .5; cursor: pointer;}
 #down-button span {
