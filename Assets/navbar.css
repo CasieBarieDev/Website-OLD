@@ -3,9 +3,9 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Bahnschrift, serif;
+	overflow-x: hidden;
 }
 nav {
-	transition: color .4s ease-in-out, background-color .4s ease-in-out, box-shadow .4s ease-in-out;
 	position: fixed;
 	width: 100%;
 	z-index: 99;
@@ -14,7 +14,7 @@ nav {
 	align-items: center;
 	background-color: var(--nav-bg-color);
 	color: var(--nav-bg-color);
-	padding: 5px 15px;
+	padding: 5px 0 5px 15px;
 	box-shadow: 0 0 5px 3px;
 }
 
@@ -102,7 +102,7 @@ nav {
 	transform: translateY(-100%);
 	background-color: var(--nav-bg-color);
 	color: var(--nav-font-color);
-	transition: .3s, background-color .4s ease-in-out, color .4s ease-in-out;
+	transition: .3s;
 }
 .mobile-menu.is-open {
 	opacity: 1;
@@ -118,7 +118,7 @@ nav {
 	transition: 0.3s;
 }
 .mobile-item:hover {background-color: var(--secondary-color);}
-.mobile-item.current {text-decoration: underline var(--secondary-color) !important; text-underline-position: under;}
+.mobile-item.current {text-decoration: underline var(--primary-color) !important; text-underline-position: under;}
 
 @media (min-width: 965px) {.mobile-menu, .hamburger {display: none;} .menu {display: flex;}}
 @media (max-width: 420px) {.Logo a {font-size: 20px;}}
