@@ -1,6 +1,7 @@
 footer {
 	padding: 30px 0;
 	background-color: var(--nav-bg-color);
+	box-shadow: 0 0 5px 3px var(--nav-bg-color);
 }
 footer .socials {
 	text-align: center;

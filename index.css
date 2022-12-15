@@ -18,24 +18,29 @@
 	max-height: 550px;
 	max-width: 550px;
 }
+.home-bottom {box-shadow: 0 0 5px 3px var(--bg-color-1);}
 H1 {
 	text-align: center;
 	padding: 4vh 0 0 0;
+	text-shadow: var(--font-color-invert) 1px 1px 1px;
 }
 p {
 	text-align: center;
 	font-size: large;
 	color: var(--font-color-gray);
+	text-shadow: var(--font-color-invert) 1px 1px 1px;
 }
 p span {
 	color: var(--font-color-gray);
 	text-decoration: none;
+	text-shadow: var(--font-color-invert) 1px 1px 1px;
 }
 p span:hover {color: var(--font-color-gray-highlight); cursor: pointer;}
-h2 {text-align: center;}
+h2 {text-align: center; text-shadow: var(--font-color-invert) 1px 1px 1px;}
 #top-langs {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	max-width: 700px;
+	width: 100%;
 }
