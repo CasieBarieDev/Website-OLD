@@ -37,7 +37,7 @@ p span {
 }
 p span:hover {color: var(--font-color-gray-highlight); cursor: pointer;}
 h2 {text-align: center; text-shadow: var(--font-color-invert) 1px 1px 1px;}
-#top-langs {
+.image {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
