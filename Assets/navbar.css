@@ -116,7 +116,7 @@ nav {
 	font-size: 20px;
 	transition: 0.3s;
 }
-.mobile-item:hover {background-color: var(--secondary-color);}
+.mobile-item:hover {background-color: var(--secondary-color); cursor: pointer;}
 .mobile-item.current {text-decoration: underline var(--primary-color) !important; text-underline-position: under;}
 
 @media (min-width: 965px) {.mobile-menu, .hamburger {display: none;} .menu {display: flex;}}

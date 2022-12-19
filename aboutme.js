@@ -8,21 +8,24 @@ jQuery(function ($) {
 });
 
 //Check if text is valid
-const allForm = document.querySelectorAll('.form input, .form textarea, .form select');
-for(let form of allForm) {
-    form.addEventListener('input', function () {
-       if(this.checkValidity()) {
-           this.classList.add('valid');
-           this.classList.remove('invalid');
-       } else {
-           this.classList.add('invalid');
-           this.classList.remove('valid');
-       } if(this.value === '') {
-           this.classList.remove('valid');
-           this.classList.remove('invalid');
-       } checkForm();
-    });
-}
+function validateForm() {
+    const allForm = document.querySelectorAll('.form input, .form textarea, .form select');
+    for(let form of allForm) {
+        form.classList.remove('valid');
+        form.addEventListener('input', function () {
+            if(this.checkValidity()) {
+                this.classList.add('valid');
+                this.classList.remove('invalid');
+            } else {
+                this.classList.add('invalid');
+                this.classList.remove('valid');
+            } if(this.value === '') {
+                this.classList.remove('valid');
+                this.classList.remove('invalid');
+            } checkForm();
+        });
+    }
+} validateForm();
 
 //Check if everthing is filled in
 function checkForm() {
@@ -37,7 +40,11 @@ function checkForm() {
     }
     document.getElementById("submit-btn").disabled = !canSubmit;
     return false;
-} window.onbeforeunload = () => {for(const form of document.getElementsByTagName('form')) {form.reset();}}
+} window.onbeforeunload = () => {
+    for(const form of document.getElementsByTagName('form')) {form.reset();}
+    validateForm();
+    checkForm();
+}
 
 //Show current age.
 document.getElementById('age').innerText = "" + calcAge();
