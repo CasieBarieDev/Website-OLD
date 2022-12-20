@@ -16,9 +16,8 @@
 	color: var(--font-color);
 	text-shadow: var(--font-color-invert) 1px 1px 1px;
 }
-.home-top-text h2 {
-	font-size: 2vw;
-}
+.home-top-text h2 {font-size: 2vw;}
+.home-bottom-text {box-shadow: 0 0 5px 3px var(--bg-color-1);}
 
 .projects {
 	max-width: 1200px;
