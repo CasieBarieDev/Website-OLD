@@ -4,11 +4,6 @@ window.onload = function () {
     for (i in elements) {
         if (elements[i].hasAttribute && elements[i].hasAttribute('data-include')) {
             fragment(elements[i], elements[i].getAttribute('data-include') + ".html");
-            if(elements[i].getAttribute('data-js') === "true") {
-                let script = document.createElement("script");
-                script.src = elements[i].getAttribute('data-include') + ".js";
-                document.body.appendChild(script);
-            }
         }
     }
     function fragment(el, url) {
@@ -16,7 +11,14 @@ window.onload = function () {
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState === 4) {status = xmlhttp.status;}
             if (localTest.test(location.href) && xmlhttp.responseText) {status = 200;}
-            if (xmlhttp.readyState === 4 && status === 200) {el.innerHTML = xmlhttp.responseText;}
+            if (xmlhttp.readyState === 4 && status === 200) {
+                el.innerHTML = xmlhttp.responseText;
+                if(el.getAttribute('data-js') === "true") {
+                    let script = document.createElement("script");
+                    script.src = el.getAttribute('data-include') + ".js";
+                    document.body.appendChild(script);
+                }
+            }
         }; try {
             xmlhttp.open("GET", url, true);
             xmlhttp.send();
