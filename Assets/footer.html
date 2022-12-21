@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<!--suppress HtmlUnknownTarget -->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="/Assets/footer.css">
-	<link rel="stylesheet" href="/Assets/default.css">
-	<script src="/Assets/default.js"></script>
-	<title>Footer</title>
+	<title>footer</title>
+	<style>
+		footer {
+			padding: 30px 0;
+			background-color: var(--nav-bg-color);
+			box-shadow: 0 0 5px 3px var(--nav-bg-color);
+		}
+		footer .socials {
+			text-align: center;
+			padding-bottom: 10px;
+			color: var(--gray-color);
+		}
+		footer .socials a {
+			font-size: 34px;
+			color: inherit;
+			width: 40px;
+			height: 40px;
+			line-height: 38px;
+			display: inline-block;
+			text-align: center;
+			border-radius: 50%;
+			margin: 0 8px;
+			opacity: 0.75;
+		}
+
+		/* GITHUB */ footer .socials a:nth-child(1):hover {color: #fafafa; text-shadow: 0 0 10px #fafafa, 0 0 20px #fafafa, 0 0 30px #fafafa;}
+		/* PAYPAL */ footer .socials a:nth-child(2):hover {color: #0099cc; text-shadow: 0 0 10px #0099cc, 0 0 20px #0099cc, 0 0 30px #0099cc;}
+		/* YOUTUBE */ footer .socials a:nth-child(3):hover {color: #bb0000; text-shadow: 0 0 10px #bb0000, 0 0 20px #bb0000, 0 0 30px #bb0000;}
+		/* INSTAGRAM */ footer .socials a:nth-child(4):hover {color: #d62976; text-shadow: 0 0 10px #d62976, 0 0 20px #d62976, 0 0 30px #d62976;}
+		/* SPIGOT */ footer .socials a:nth-child(5):hover {color: #dec91a; text-shadow: 0 0 10px #dec91a, 0 0 20px #dec91a, 0 0 30px #dec91a;}
+		/* DISCORD */ footer .socials a:nth-child(6):hover {color: #5865F2; text-shadow: 0 0 10px #5865F2, 0 0 20px #5865F2, 0 0 30px #5865F2;}
+
+		footer .copyright {
+			margin-top: 10px;
+			text-align: center;
+			font-size: 17px;
+		}
+		footer .copyright span {width: fit-content; color: var(--gray-color)}
+		footer .copyright span:hover {cursor: no-drop;}
+		footer .copyright span:after {content: "© 2022 | CasieBarie";}
+		footer .copyright span:hover:after {content: "All Rights Reserved";}
+	</style>
 </head>
 <body>
 <footer>

@@ -1,4 +1,6 @@
-$(document).ready(function() {
+if (document.readyState !== 'loading') {start();
+} else {document.addEventListener('DOMContentLoaded', function () {start();});}
+function start() {
     //Mobile Toggle
     const hamburger = document.querySelector('.hamburger');
     const mobile_menu = document.querySelector('.mobile-menu');
@@ -11,13 +13,10 @@ $(document).ready(function() {
     $(window).scroll(function () {scrolled();})
     function scrolled() {
         const nav = $('nav');
-        if($(window).scrollTop() > 50) {
-            changeOpacity(nav, 'color', '--nav-bg-color', .7);
-            changeOpacity(nav, 'background-color', '--nav-bg-color', .7);
-        } else {
-            changeOpacity(nav, 'color', '--nav-bg-color', 1);
-            changeOpacity(nav, 'background-color', '--nav-bg-color', 1);
-        }
+        let opacity = 1- $(window).scrollTop() / 700;
+        opacity = (opacity >= .5) ? opacity : .5;
+        changeOpacity(nav, 'color', '--nav-bg-color', opacity);
+        changeOpacity(nav, 'background-color', '--nav-bg-color', opacity);
     }
 
     //Moving Highlight Line
@@ -46,4 +45,4 @@ $(document).ready(function() {
             }
         })
     })
-});
+}

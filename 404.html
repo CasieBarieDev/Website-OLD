@@ -123,13 +123,13 @@
 		@media screen and (max-width: 730px) {#description{min-width: 100%}}
 	</style>
 	<link href="/Assets/default.css" rel="stylesheet" type="text/css"/>
-	<script crossorigin="anonymous" src="https://kit.fontawesome.com/0c4268d390.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script defer crossorigin="anonymous" src="https://kit.fontawesome.com/0c4268d390.js"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body class="404" id="body" data-currentnav="Home">
 <div id="everything">
 	<div id="wrap">
-		<div data-include="/Assets/navbar"></div>
+		<div data-include="/Assets/navbar" data-js="true"></div>
 		<div id="page">
 			<div class="content">
 				<h1 class="text" data-text="404">404</h1>
@@ -140,7 +140,7 @@
 				</p>
 			</div>
 		</div>
-		<div data-include="/Assets/footer"></div>
+		<div data-include="/Assets/footer" data-js="false"></div>
 	</div>
 </div>
 <script defer src="/Assets/default.js"></script>

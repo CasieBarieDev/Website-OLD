@@ -8,12 +8,12 @@
 	<link href="/Assets/default.css" rel="stylesheet" type="text/css"/>
 	<link href="index.css" rel="stylesheet" type="text/css"/>
 	<script defer crossorigin="anonymous" src="https://kit.fontawesome.com/0c4268d390.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body class="Home" id="body" data-currentnav="Home">
 <div id="everything">
 	<div id="wrap">
-		<div data-include="/Assets/navbar"></div>
+		<div data-include="/Assets/navbar" data-js="true"></div>
 		<div id="page">
 			<div class="home-top" id="scroll"></div>
 			<img alt="logo" class="base-element" id="home-logo" src="Images/LOGO-removebg.webp" height="500" width="100"/>
@@ -35,8 +35,8 @@
 			</div>
 		</div>
 	</div>
-	<div data-include="/Assets/footer"></div>
+	<div data-include="/Assets/footer" data-js="false"></div>
 </div>
-<script defer src="/Assets/default.js"></script>
+<script src="/Assets/default.js"></script>
 </body>
 </html>

@@ -1,16 +1,30 @@
 window.onload = function () {
-    const includes = $('[data-include]')
-    $.each(includes, function () {
-        const file = $(this).data('include') + '.html'
-        $(this).load(file)
-    })
+    //Import other .HTML and .JS files
+    let elements = document.getElementsByTagName('*'), i;
+    for (i in elements) {
+        if (elements[i].hasAttribute && elements[i].hasAttribute('data-include')) {
+            fragment(elements[i], elements[i].getAttribute('data-include') + ".html");
+            if(elements[i].getAttribute('data-js') === "true") {
+                let script = document.createElement("script");
+                script.src = elements[i].getAttribute('data-include') + ".js";
+                document.body.appendChild(script);
+            }
+        }
+    }
+    function fragment(el, url) {
+        let localTest = /^file:/, xmlhttp = new XMLHttpRequest(), status = 0;
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState === 4) {status = xmlhttp.status;}
+            if (localTest.test(location.href) && xmlhttp.responseText) {status = 200;}
+            if (xmlhttp.readyState === 4 && status === 200) {el.innerHTML = xmlhttp.responseText;}
+        }; try {
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        } catch(err) {console.log(err.stack)}
+    }
 };
 
-$(document).scroll(function() {
-    const scroll = $(window).scrollTop();
-    $("#scroll").css("background-position", "50%" + (scroll / 30) + "vh");
-});
-
+//Change the opacity of an element
 function changeOpacity(element, cssname, varcolor, opacity) {
     const current_color = getComputedStyle(document.documentElement).getPropertyValue(varcolor);
     const match = /rgba?\((\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*(,\s*\d+[.\d+]*)*\)/g.exec(current_color);
@@ -18,6 +32,7 @@ function changeOpacity(element, cssname, varcolor, opacity) {
     return false;
 }
 
+//Smooth transition
 window.transitionToPage = function(href) {
     document.querySelector('body').style.opacity = "0"
     setTimeout(function() {
@@ -25,6 +40,13 @@ window.transitionToPage = function(href) {
     }, 500)
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+//Smooth transition 2 and scroll
+if (document.readyState !== 'loading') {loaded();
+} else {document.addEventListener('DOMContentLoaded', function () {loaded();});}
+function loaded() {
     $('body').css("opacity", 1);
-})
+    $(document).scroll(function() {
+        const scroll = $(window).scrollTop();
+        $("#scroll").css("background-position", "50%" + (scroll / 30) + "vh");
+    });
+}

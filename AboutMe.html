@@ -7,13 +7,13 @@
 	<link href="/Images/CasieBarie-Pose.webp" rel="icon">
 	<link href="/Assets/default.css" rel="stylesheet" type="text/css"/>
 	<link href="AboutMe.css" rel="stylesheet" type="text/css"/>
-	<script crossorigin="anonymous" src="https://kit.fontawesome.com/0c4268d390.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script defer crossorigin="anonymous" src="https://kit.fontawesome.com/0c4268d390.js"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body class="AboutMe" id="body" data-currentnav="About Me">
 <div id="everything">
 	<div id="wrap">
-		<div data-include="/Assets/navbar"></div>
+		<div data-include="/Assets/navbar" data-js="true"></div>
 		<div id="page">
 			<div class="home-top" id="scroll"></div>
 			<div class="home-top-text">
@@ -63,7 +63,7 @@
 			</div>
 		</div>
 	</div>
-	<div data-include="/Assets/footer"></div>
+	<div data-include="/Assets/footer" data-js="false"></div>
 </div>
 <script src="/Assets/default.js"></script>
 <script src="AboutMe.js"></script>
