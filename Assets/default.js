@@ -1,6 +1,6 @@
 window.onload = function () {
     //Import other .HTML and .JS files
-    let elements = document.getElementsByTagName('*'), i;
+    let elements = document.getElementsByTagName('div'), i;
     for (i in elements) {
         if (elements[i].hasAttribute && elements[i].hasAttribute('data-include')) {
             fragment(elements[i], elements[i].getAttribute('data-include') + ".html");
