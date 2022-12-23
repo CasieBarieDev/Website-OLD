@@ -6,7 +6,7 @@
 	<title>CasieBarie Development</title>
 	<link href="/Images/CasieBarie-Pose.webp" rel="icon">
 	<link href="/Assets/default.css" rel="stylesheet" type="text/css"/>
-	<link href="index.css" rel="stylesheet" type="text/css"/>
+	<link href="/Assets/projects.css" rel="stylesheet" type="text/css"/>
 	<script defer crossorigin="anonymous" src="https://kit.fontawesome.com/0c4268d390.js"></script>
 	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
@@ -15,18 +15,35 @@
 	<div id="wrap">
 		<div data-include="/Assets/navbar" data-js="true"></div>
 		<div id="page">
-			<div class="home-top" id="scroll"></div>
+			<div class="home-top" id="scroll" style="background-image: url('/Images/minecraft.webp')"></div>
 			<div class="home-top-text">
 				<h1>Minecraft Plugins</h1>
 			</div>
 			<span id="down-button" onclick="window.scroll(0,800);"><span></span></span>
 			<div class="home-bottom-text">
-				
+				<div class="projects">
+					<div class="project" data-spigotid="90967" onclick="transitionToPage('CasieBounce')">
+						<img src="/Images/CasieBounce.webp" width="300">
+						<p>CasieBounce<br><span class="lang">?</span><br><span class="desc">(? - ?)</span></p>
+						<div class="open">VIEW</div>
+					</div>
+					<div class="project" onclick="transitionToPage('CasieAttractionOperate')">
+						<img src="/Images/CAO.webp" width="300">
+						<p>CasieAttractionOperate<br><span class="lang" style="color: orangered;">In Development</span><br><span class="desc">(? - ?)</span></p>
+						<div class="open">VIEW</div>
+					</div>
+					<div class="project" onclick="transitionToPage('Ziplines')">
+						<img src="/Images/Ziplines.webp" width="300">
+						<p>Ziplines<br><span class="lang" style="color: orangered">In Development</span><br><span class="desc">(? - ?)</span></p>
+						<div class="open">VIEW</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div data-include="/Assets/footer" data-js="false"></div>
 </div>
 <script src="/Assets/default.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
