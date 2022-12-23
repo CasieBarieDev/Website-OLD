@@ -122,21 +122,18 @@ form button {
 	color: var(--font-color-gray);
 	border: 2px solid var(--gray-color);
 	border-radius: 9px;
-	cursor: pointer;
+	cursor: no-drop;
 	width: 100%;
 }
-form button:disabled:hover {
-	animation: shake .2s;
-	cursor: no-drop;
-}
-form button:enabled {
+form button.enabled {
 	color: var(--primary-color);
 	border-color: var(--secondary-color);
 }
-form button:enabled:hover {
+form button.enabled:hover {
 	transition: color 0.3s, background-color 0.3s;
 	background-color: var(--primary-color);
 	color: var(--font-color);
+	cursor: pointer;
 }
 
 form .form input ~ label .required {color: var(--font-color-gray)}

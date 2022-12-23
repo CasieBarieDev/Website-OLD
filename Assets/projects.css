@@ -51,7 +51,7 @@
 	text-align: center;
 	width: 100%;
 }
-.project .lang {
+.project .lang, .project .version, .project .downloads {
 	color: var(--font-color-highlight);
 	display:inline-block;
 	text-decoration: none !important;

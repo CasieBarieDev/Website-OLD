@@ -4,13 +4,12 @@ function projects() {
     const plugin = $('[data-spigotid]');
     $.each(plugin, function () {
         const self = $(this);
-        $.getJSON("https://api.spigotmc.org/legacy/update.php?resource=" + self.data('spigotid'), function (data) {
-            let desc = "v" + data;
-            $.getJSON("https://api.spiget.org/v2/resources/" + self.data('spigotid'), function (data) {
-                self.find(".lang").text(desc + "⠀⠀" + data["downloads"] + "⇩");
-            })
+        $.getJSON("https://api.spiget.org/v2/resources/" + self.data('spigotid') + "/versions/latest", function (data) {
+            self.find(".version").text("v" + data["name"] + "⠀");
         })
-        
+        $.getJSON("https://api.spiget.org/v2/resources/" + self.data('spigotid'), function (data) {
+            self.find(".downloads").text("⠀" + data["downloads"] + "⇩");
+        })
         $.getJSON("https://api.spiget.org/v2/resources/" + self.data('spigotid'), function (data) {
             const testedVersions = data["testedVersions"];
             if(testedVersions.length === 1) {self.find(".desc").text("(" + testedVersions + ")");

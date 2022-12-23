@@ -1,6 +1,7 @@
 if (document.readyState !== 'loading') {aboutme();
 } else {document.addEventListener('DOMContentLoaded', function () {aboutme();});}
 function aboutme() {
+    checkForm();
     //Requirement switch for Email and Discord
     jQuery(function ($) {
         const $inputs = $("input[name=Discord],input[name='Email']");
@@ -43,14 +44,26 @@ function aboutme() {
                 }
             }
         }
-        document.getElementById("submit-btn").disabled = !canSubmit;
+        if(canSubmit) {document.getElementById("submit-btn").classList.add("enabled");
+        } else {document.getElementById("submit-btn").classList.remove("enabled");}
         return false;
     }
 
-    window.onbeforeunload = () => {
-        for (const form of document.getElementsByTagName('form')) {
-            form.reset();
+    //Submit and Shake
+    const submitBTN = document.getElementById('submit-btn');
+    submitBTN.addEventListener('click', function () {
+        if(submitBTN.classList.contains("enabled")) {
+            document.getElementsByTagName('form')[0].submit();
+        } else {
+            submitBTN.style.animation = "shake .2s";
+            setTimeout(function () {submitBTN.style.animation = "";
+            }, 500);
         }
+    })
+
+    //Reset form when submitted
+    window.onbeforeunload = () => {
+        for (const form of document.getElementsByTagName('form')) {form.reset();}
         validateForm();
         checkForm();
     }
