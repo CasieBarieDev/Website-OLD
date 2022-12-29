@@ -106,7 +106,7 @@ function CasieBounce() {
         const allForm = document.querySelectorAll('.form input, .form select');
         for (let form of allForm) {if(form.classList.contains("invalid")) {isValid = false;}}
         if(isValid) {
-            result.innerHTML = "<copy>" + output + "</copy>";
+            result.innerHTML = "<co-py>" + output + "</co-py>";
             result.classList.remove("invalid");
             preview.innerHTML = previewtext;
             preview.classList.remove("invalid");

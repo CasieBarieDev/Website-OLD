@@ -33,7 +33,7 @@ function loaded() {
 }
 
 function copy() {
-    const code = $('copy')
+    const code = $('co-py')
     $.each(code, function () {
         const text = $(this).clone().children().remove().end().text();
         $(this).html(text + "<span class=\"tooltiptext\" class=\"myTooltip\">𝘾𝙤𝙥𝙮 𝙏𝙤 𝘾𝙡𝙞𝙥𝙗𝙤𝙖𝙧𝙙</span>");

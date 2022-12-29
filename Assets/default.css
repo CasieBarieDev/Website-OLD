@@ -73,7 +73,7 @@ hr.rounded {
     }
 }
 
-copy {
+co-py {
     cursor: pointer;
     background: var(--bg-color-2);
     border-radius: 5px;
@@ -81,7 +81,7 @@ copy {
     position: relative;
     display: inline-block;
 }
-copy .tooltiptext {
+co-py .tooltiptext {
     font-size: large;
     visibility: hidden;
     width: 170px;
@@ -97,7 +97,7 @@ copy .tooltiptext {
     opacity: 0;
     transition: opacity 0.3s;
 }
-copy .tooltiptext::after {
+co-py .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -107,7 +107,7 @@ copy .tooltiptext::after {
     border-style: solid;
     border-color: var(--gray-color) transparent transparent transparent;
 }
-copy:hover .tooltiptext {
+co-py:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
     transition-duration: .7s;
