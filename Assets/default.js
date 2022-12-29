@@ -14,7 +14,7 @@ window.transitionToPage = function(href) {
     }, 500)
 }
 
-
+window.addEventListener('popstate', function () {loaded();});
 if (document.readyState !== 'loading') {loaded();
 } else {document.addEventListener('DOMContentLoaded', function () {loaded();});}
 function loaded() {
@@ -26,6 +26,7 @@ function loaded() {
     })
 
     $('body').css("opacity", 1);
+
     $(document).scroll(function() {
         const scroll = $(window).scrollTop();
         $("#scroll").css("background-position", "50%" + (scroll / 30) + "vh");
