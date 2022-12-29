@@ -14,6 +14,7 @@ window.transitionToPage = function(href) {
     }, 500)
 }
 
+window.onunload = function(){};
 window.addEventListener('popstate', function () {loaded();});
 if (document.readyState !== 'loading') {loaded();
 } else {document.addEventListener('DOMContentLoaded', function () {loaded();});}
