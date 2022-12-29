@@ -44,7 +44,6 @@
 }
 .project p {
 	color: var(--font-color);
-	text-decoration: underline;
 	font-size: 20px;
 	position: absolute;
 	bottom: 3%;
@@ -54,12 +53,10 @@
 .project .lang, .project .version, .project .downloads {
 	color: var(--font-color-highlight);
 	display:inline-block;
-	text-decoration: none !important;
 }
 .project .desc {
 	color: var(--font-color-gray);
 	display:inline-block;
-	text-decoration: none !important;
 }
 .project .open {
 	transition: opacity .5s ease;
