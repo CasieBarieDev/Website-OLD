@@ -15,5 +15,13 @@ function projects() {
             if(testedVersions.length === 1) {self.find(".desc").text("(" + testedVersions + ")");
             } else {self.find(".desc").text("(" + testedVersions[0] + "-" + testedVersions[testedVersions.length - 1] + ")");}
         })
+    });
+    
+    const library = $('[data-libraryname]');
+    $.each(library, function () {
+        const self = $(this);
+        $.getJSON("https://api.github.com/repos/" + self.data('libraryname') + "/releases/latest", function (data) {
+            self.find(".version").text("v" + data["tag_name"] + " ")
+        })
     })
 }

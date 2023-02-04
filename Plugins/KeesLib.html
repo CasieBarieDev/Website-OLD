@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>CasieBarie Development</title>
+	<link href="/Images/CasieBarie-Pose.webp" rel="icon">
+	<link href="/Assets/default.css" rel="stylesheet" type="text/css"/>
+	<link href="KeesLib.css" rel="stylesheet" type="text/css">
+	<script defer crossorigin="anonymous" src="https://kit.fontawesome.com/0c4268d390.js"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body class="KeesLib" id="body" data-currentnav="Minecraft Plugins">
+<div id="everything">
+	<div id="wrap">
+		<div data-include="/Assets/navbar" data-js="true"></div>
+		<div id="page">
+			<div class="home-top" id="scroll" style="background-image: url('/Images/Plugins/KeesLib/bookshelf.webp')"></div>
+			<div class="home-top-text">
+				<h1>📚 KeesLib 📚</h1>
+				<h2>A simple library for my plugins!</h2>
+				<p>
+					<a href="https://github.com/CasieBarieDev/KeesLib/releases/latest"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/CasieBarieDev/KeesLib?label=Release&logo=github&style=plastic"></a>
+					<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/CasieBarieDev/KeesLib?color=red&label=Size&logo=Github&style=plastic">
+					<a href="https://github.com/CasieBarieDev/KeesLib/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/CasieBarieDev/KeesLib?label=License&logo=Github&style=plastic"></a>
+					<a href="https://jitpack.io/#dev.casiebarie/keeslib"><img alt="JitPack" src="https://img.shields.io/jitpack/version/dev.casiebarie/keeslib?color=lime&label=JitPack&logo=azurepipelines&style=plastic"></a>
+				</p>
+			</div>
+			<span id="down-button" onclick="window.scroll(0,700);"><span></span></span>
+			<div class="home-bottom"></div>
+			<div class="text">
+				<hr class="rounded">
+				<ul class="no-indent"><p>This is a library I use for my plugins to make my life easier. But you can use it too! How? Just take a look!
+					<br>It contains a few methos for checking bukkit versions and if certain dependencies are enabled on the server. It also has an amazing UpdateChecker!</p></ul>
+				<hr class="rounded">
+				<div class="setup">
+					<img src="/Images/Plugins/KeesLib/setup.webp"><br>
+					<ul class="no-indent"><h1>MAVEN:</h1></ul>
+					<ol>
+						<li>Add the JitPack repository to your build file
+							<pre><code class="language-xml match-braces">
+								&lt;repositories&gt;
+									&lt;repository&gt;
+										&lt;id&gt;jitpack.io&lt;/id&gt;
+										&lt;url&gt;https://jitpack.io&lt;/url&gt;
+									&lt;/repository&gt;
+								&lt;/repositories&gt;
+							</code></pre>
+						</li>
+						<li>Add the dependency
+							<pre><code class="language-xml match-braces">
+								&lt;dependency&gt;
+									&lt;groupId&gt;dev.casiebarie&lt;/groupId&gt;
+									&lt;artifactId&gt;keeslib&lt;/artifactId&gt;
+									&lt;version&gt;VERSION&lt;/version&gt;
+								&lt;/dependency&gt;
+							</code></pre>
+						</li>
+						<li>Add Javadoc (Optional)
+							<pre><code class="language-xml match-braces">
+								&lt;repository&gt;
+									&lt;id&gt;jitpack.io&lt;/id&gt;
+									&lt;url&gt;https://javadoc.jitpack.io&lt;/url&gt;
+								&lt;/repository&gt;
+							</code></pre>
+							<pre><code class="language-xml match-braces">
+								&lt;dependency&gt;
+									&lt;groupId&gt;dev.casiebarie&lt;/groupId&gt;
+									&lt;artifactId&gt;keeslib&lt;/artifactId&gt;
+									&lt;version&gt;VERSION&lt;/version&gt;
+									&lt;classifier&gt;javadoc&lt;/classifier&gt;
+								&lt;/dependency&gt;
+							</code></pre>
+						</li>
+					</ol>
+					<br>
+					<ul class="no-indent"><h1>GRADLE:</h1></ul>
+					<ol>
+						<li>Add the JitPack repository to your build file
+							<pre><code class="language-gradle">
+								allprojects {
+									repositories {
+										...
+										maven {url 'https://jitpack.io'}
+									}
+								}
+							</code></pre>
+						</li>
+						<li>Add the dependency
+							<pre><code class="language-gradle">
+								dependencies {
+									...
+									implementation 'dev.casiebarie:keeslib:VERSION'
+								}
+							</code></pre>
+						</li>
+					</ol>
+				</div>
+				<hr class="rounded">
+				<div class="usage">
+					<img src="/Images/Plugins/KeesLib/usage.webp"><br>
+					<ol class="no-indent"><h1>START</h1></ol>
+					<ul>
+						<li><pre><code class="language-java match-braces">
+							import dev.casiebarie.keeslib.KeesLib;
+
+							KeesLib keeslib = new KeesLib(JavaPlugin plugin);
+						</code></pre></li>
+					</ul>
+					<br>
+					<ol class="no-indent"><h1>METHODS</h1></ol>
+					<ul>
+						<li>
+							<pre><code class="language-java match-braces">
+							keeslib.hasPlaceholerAPI();
+							</code></pre>
+							<p>↳ Returns true when <a href=https://www.spigotmc.org/resources/placeholderapi.6245/>PlaceholderAPI</a> is enabled in the server.</p>
+						</li>
+						<li>
+							<pre><code class="language-java match-braces">
+							keeslib.isLegacy(BukkitVersions lowestVersion, BukkitVersions highestVersion);
+							</code></pre>
+							<p>↳ Checks if the server is legacy and disables the plugin if the version is not supported.</p>
+						</li>
+						<li>
+							<pre><code class="language-java match-braces">
+							keeslib.hasVault(Boolean economy, Boolean permissions, Boolean chat);
+							</code></pre>
+							<p>↳ Returns true if <a href="https://www.spigotmc.org/resources/vault.34315/">Vault</a> is enabled and all the servicemanagers are registered.</p>
+						</li>
+						<li>
+							<pre><code class="language-java match-braces">
+							keeslib.updateChecker(Integer recourceID, ChatColor borderColor, ChatColor textColor, String character, String permission, Double frequencyHours);
+							</code></pre>
+							<p>↳ A fancy UpdateChecker to let server owners know when there is an new update. It shows the new update with a download link.</p>
+							<u id="uc-preview">Click for preview.</u>
+							<div id="uc-preview-modal" class="modal" onclick="ucClose()">
+								<img class="modal-content" id="uc" alt="UpdateChecker" src="/Images/Plugins/KeesLib/uc-preview.webp">
+								<div id="caption">Preview of the UpdateChecker</div>
+							</div>
+						</li>
+						<li>
+							<pre><code class="language-java match-braces">
+							keeslib.hex(String msg);
+							</code></pre>
+							<p>↳ Translates all the #HEX codes in the message to ChatColor codes.</p>
+						</li>
+					</ul>
+					<br>
+					<ol class="no-indent"><h1>ENUMS</h1></ol>
+					<ul>
+						<li>
+							<pre><code class="language-java match-braces">
+							BukkitVersions(Boolean isLegacy);
+							</code></pre>
+							<p>↳ An enum with all the bukkitversions with IsLegacy to show if it is a legacy version.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-include="/Assets/footer" data-js="false"></div>
+</div>
+<script src="/Assets/default.js"></script>
+<script src="KeesLib.js"></script>
+</body>
+</html>

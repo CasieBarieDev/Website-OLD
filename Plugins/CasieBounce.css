@@ -19,7 +19,7 @@
 .home-top-text h1 {
 	position: relative;
 	top: 30%;
-	color: lightblue
+	color: var(--font-color-title)
 }
 .home-top-text h2 {
 	position: relative;
@@ -30,6 +30,7 @@
 	display: inline-block;
 	position: absolute;
 	bottom: 15%;
+	font-size: large;
 	left: 50%;
 	transform: translateX(-50%);
 }

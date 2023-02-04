@@ -20,10 +20,13 @@
 				<h1>✨ CasieBounce ✨</h1>
 				<h2>Create bouncy castles in your server!</h2>
 				<p>
-					<a href="https://www.spigotmc.org/resources/.90967/" target="_blank"><img src="https://img.shields.io/spiget/downloads/90967?label=DOWNLOAD&style=plastic" alt="Downloads"></a>
-					<a href="https://github.com/CasieBarieDev/CasieBounce" target="_blank"><img src="https://img.shields.io/github/license/casiebariedev/CasieBounce?label=GITHUB&logo=github&style=plastic" alt="Github"></a>
+					<a href="https://www.spigotmc.org/resources/.90967/" target="_blank"><img src="https://img.shields.io/spiget/downloads/90967?label=Download&style=plastic" alt="Downloads"></a>
+					<a href="https://github.com/CasieBarieDev/CasieBounce/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/casiebariedev/CasieBounce?label=GitHub&logo=github&style=plastic" alt="Github"></a>
 					<a href="https://www.spigotmc.org/resources/.90967/updates/" target="_blank"><img src="https://img.shields.io/spiget/version/90967?label=%20&style=plastic" alt="Version"></a><a href="https://www.spigotmc.org/resources/.90967/reviews/" target="_blank"><img src="https://img.shields.io/spiget/stars/90967?label=%20&style=plastic" alt="Rating"></a>
 					<a href="https://www.paypal.com/donate/?hosted_button_id=PGLMKJEJRL6XN" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=PGLMKJEJRL6XN','PayPal', 'width=500,height=500,scrollbars=no,toolbar=no,location=no'); return false"><img src="https://img.shields.io/static/v1?label=Donate&message=%20&color=009cde&style=plastic&logo=paypal"></a>
+					<br>
+					<a href="https://bstats.org/plugin/bukkit/CasieBounce/13216" target="_blank"><img alt="bStats Servers" src="https://img.shields.io/bstats/servers/13216?color=pink&label=Servers&style=plastic"></a>
+					<a href="https://bstats.org/plugin/bukkit/CasieBounce/13216" target="_blank"><img alt="bStats Players" src="https://img.shields.io/bstats/players/13216?color=hotpink&label=Players&style=plastic"></a>
 				</p>
 			</div>
 			<span id="down-button" onclick="window.scroll(0,700);"><span></span></span>
@@ -110,6 +113,14 @@
 						<label for="rounded">Round Number</label>
 					</div>
 					<div class="form">
+						<select id="format">
+							<option>Name</option>
+							<option>Number</option>
+							<option>Both</option>
+						</select>
+						<label for="format">Format</label>
+					</div>
+					<div class="form">
 						<select id="region">
 							<option>Yes</option>
 							<option>No</option>
@@ -130,14 +141,6 @@
 					<div class="form">
 						<input type="number" id="position" min="1" max="99999999">
 						<label for="position">Position</label>
-					</div>
-					<div class="form">
-						<select id="format">
-							<option>Name</option>
-							<option>Number</option>
-							<option>Both</option>
-						</select>
-						<label for="format">Format</label>
 					</div>
 				</form>
 				<div class="result-container">

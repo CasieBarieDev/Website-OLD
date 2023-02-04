@@ -2,14 +2,14 @@ if (document.readyState !== 'loading') {CasieBounce();
 } else {document.addEventListener('DOMContentLoaded', function () {CasieBounce();});}
 function CasieBounce() {
     const type =  document.getElementById("type"),
-    rounded = document.getElementById("rounded"),
-    region = document.getElementById("region"),
-    region_name = document.getElementById("region-name"),
-    world_name = document.getElementById("world-name"),
-    format = document.getElementById("format"),
-    position = document.getElementById("position"),
-    result = document.getElementById("result"),
-    preview = document.getElementById("preview");
+        rounded = document.getElementById("rounded"),
+        region = document.getElementById("region"),
+        region_name = document.getElementById("region-name"),
+        world_name = document.getElementById("world-name"),
+        format = document.getElementById("format"),
+        position = document.getElementById("position"),
+        result = document.getElementById("result"),
+        preview = document.getElementById("preview");
     rounded.addEventListener("change", updatetext);
     region_name.addEventListener("input", updatetext);
     world_name.addEventListener("input", updatetext);
@@ -20,13 +20,14 @@ function CasieBounce() {
     format.selectedIndex = -1;
 
     function typeChange() {
-        if(type.value !== "Leaderboard") {
+        if(type.value !== "Total") {format.disabled = false;
+        } else {
             format.disabled = true;
             format.selectedIndex = -1;
-            position.disabled = true;
+        } if(type.value === "Leaderboard") {position.disabled = false;
         } else {
-            format.disabled = false;
-            position.disabled = false;
+            position.disabled = true;
+            position.value = '';
         } updatetext(); formatChange(); valid();
     } type.addEventListener("change", typeChange);
     typeChange()
@@ -70,39 +71,54 @@ function CasieBounce() {
     function updatetext() {
         let output = "%cb_";
         let previewtext = "";
-        if(type.value === "Leaderboard") {
-            output += "leaderboard";
-            if(region.value === "Yes") {output += "region_" + region_name.value + ":" + world_name.value;}
-            output += "_" + position.value + "_";
-            output += format.value.toUpperCase();
-            if(format.value !== "Name") {
-                if(format.value === "Both") {previewtext += "CasieBarie: ";}
+        switch (type.value) {
+            case "Total":
+                output += "total";
+                if(region.value === "Yes") {output += "region_" + region_name.value + ":" + world_name.value;}
                 if(rounded.value === "Yes") {
-                    output += "-ROUNDED%";
+                    output += "_NUMBER-ROUNDED%";
                     previewtext += "3.7k";
                 } else {
-                    output += "-FULL%";
+                    output += "_NUMBER-FULL%";
                     previewtext += "3745";
-                }
-            } else {
-                output += "%"
-                previewtext = "CasieBarie";
-            }
-        } else {
-            if(type.value === "Total") {output += "total";
-            } else {
-                output += "player"
-                previewtext += "CasieBarie: ";
-            }
-            if(region.value === "Yes") {output += "region_" + region_name.value + ":" + world_name.value;}
-            if(rounded.value === "Yes") {
-                output += "_NUMBER-ROUNDED%";
-                previewtext += "3.7k";
-            } else {
-                output += "_NUMBER-FULL%";
-                previewtext += "3745";
-            }
-        } let isValid = true;
+                } break;
+            case "Player":
+                output += "player";
+                if(region.value === "Yes") {output += "region_" + region_name.value + ":" + world_name.value;}
+                output += "_" + format.value.toUpperCase();
+                if(format.value !== "Name") {
+                    if(format.value === "Both") {previewtext += "CasieBarie: ";}
+                    if(rounded.value === "Yes") {
+                        output += "-ROUNDED%";
+                        previewtext += "3.7k";
+                    } else {
+                        output += "-FULL%";
+                        previewtext += "3745";
+                    }
+                } else {
+                    output += "%"
+                    previewtext = "CasieBarie";
+                } break;
+            case "Leaderboard":
+                output += "leaderboard";
+                if(region.value === "Yes") {output += "region_" + region_name.value + ":" + world_name.value;}
+                output += "_" + position.value + "_";
+                output += format.value.toUpperCase();
+                if(format.value !== "Name") {
+                    if(format.value === "Both") {previewtext += "CasieBarie: ";}
+                    if(rounded.value === "Yes") {
+                        output += "-ROUNDED%";
+                        previewtext += "3.7k";
+                    } else {
+                        output += "-FULL%";
+                        previewtext += "3745";
+                    }
+                } else {
+                    output += "%"
+                    previewtext = "CasieBarie";
+                } break;
+        }
+        let isValid = true;
         const allForm = document.querySelectorAll('.form input, .form select');
         for (let form of allForm) {if(form.classList.contains("invalid")) {isValid = false;}}
         if(isValid) {
