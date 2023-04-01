@@ -25,6 +25,7 @@
 			border-radius: 50%;
 			margin: 0 8px;
 			opacity: 0.75;
+			transition: all .5s;
 		}
 
 		/* GITHUB */ footer .socials a:nth-child(1):hover {color: #fafafa; text-shadow: 0 0 10px #fafafa, 0 0 20px #fafafa, 0 0 30px #fafafa;}
@@ -36,14 +37,23 @@
 
 		footer .copyright {
 			margin-top: 10px;
-			text-align: center;
 			font-size: 17px;
+			color: var(--gray-color);
 		}
-		footer .copyright span {width: fit-content; color: var(--gray-color)}
-		footer .copyright span:hover {cursor: no-drop;}
-		footer .copyright span:hover {cursor: no-drop;}
-		footer .copyright span:after {content: "© 2021-2023 | CasieBarie";}
-		footer .copyright span:hover:after {content: "All Rights Reserved";}
+		footer .copyright .wrap div {
+			position: absolute;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+			text-align: center;
+			width: fit-content;
+		}
+		footer .copyright .two {opacity: 0;}
+		.one, .two {transition: opacity 0.5s linear;}
+		.wrap:hover {cursor: no-drop;}
+		.wrap:hover .one {opacity: 0;}
+		.wrap:hover .two {opacity: 1;}
 	</style>
 </head>
 <body>
@@ -56,7 +66,12 @@
 		<a href="https://www.spigotmc.org/members/casiebarie.533954/" title="Ｓｐｉｇｏｔ" target="_blank"><i class="fa-solid fa-faucet-drip"></i></a>
 		<a href="https://discord.gg/ZptCBHeHyg" title="Ｄｉｓｃｏｒｄ" target="_blank"><i class="fa-brands fa-discord"></i></a>
 	</div>
-	<p class="copyright"><span></span></p>
+	<div class="copyright">
+		<div class="wrap">
+			<div class="one">© 2021-2023 | CasieBarie</div>
+			<div class="two">All Rights Reserved</div>
+		</div>
+	</div>
 </footer>
 </body>
 </html>

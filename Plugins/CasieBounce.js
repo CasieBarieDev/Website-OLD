@@ -131,6 +131,6 @@ function CasieBounce() {
             result.classList.add("invalid")
             preview.innerHTML = "INVALID";
             preview.classList.add("invalid")
-        } copy();
-    }
+        }
+    } copy();
 }

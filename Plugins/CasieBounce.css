@@ -46,7 +46,10 @@
 	width: auto;
 }
 
-.home-bottom-text {box-shadow: 0 0 5px 3px var(--bg-color-1);}
+.line {box-shadow: 0 0 5px 3px var(--bg-color-1);}
+.home-bottom-text {
+
+}
 
 .text {
 	line-height: 160%;
@@ -177,6 +180,9 @@ form .form select option {
 }
 ::-webkit-validation-bubble-message { display: none; }
 @media screen and (max-width: 800px) {
+	.sidebar {
+		visibility: collapse;
+	}
 	.placeholder-gen {
 		grid-gap: unset;
 		grid-template-columns: 1fr;

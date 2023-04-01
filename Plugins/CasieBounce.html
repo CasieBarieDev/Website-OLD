@@ -11,6 +11,7 @@
 	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body class="CasieBounce" id="body" data-currentnav="Minecraft Plugins">
+<div class="transition is-active"></div>
 <div id="everything">
 	<div id="wrap">
 		<div data-include="/Assets/navbar" data-js="true"></div>
@@ -30,10 +31,10 @@
 				</p>
 			</div>
 			<span id="down-button" onclick="window.scroll(0,700);"><span></span></span>
-			<div class="home-bottom-text"></div>
+			<div class="line"></div>
 			<div class="text">
-				<hr class="rounded">
-				<div class="setup">
+				<section class="setup">
+					<hr class="rounded">
 					<img src="/Images/Plugins/CasieBounce/Setup.webp"><br>
 					<ol>
 						<li>Download the plugin. (Optional: <a href="https://dev.bukkit.org/projects/worldguard" title="ＷｏｒｌｄＧｕａｒｄ" target="_blank">WorldGuard</a>)<br>
@@ -49,9 +50,9 @@
 						<li>Reload the config by typing <co-py>/cb ReloadConfig</co-py>. Any errors will be send in the console and the bouncing will be disabled.<br>
 						<li><span style="color: #cb5118">HAPPY BOUNCING!</span>
 					</ol>
-				</div>
-				<hr class="rounded">
-				<div class="commands">
+				</section>
+				<section class="commands">
+					<hr class="rounded">
 					<img src="/Images/Plugins/CasieBounce/Commands.webp"><br>
 					<ul>
 						<li><co-py>/cb ReloadConfig</co-py> <span>| Reloads the config</span></li>
@@ -60,18 +61,18 @@
 						<li><co-py>/cb GetRegionSettings</co-py> <span>| Shows the bounce settings of the region you are standing in.</span></li>
 						<li><co-py>/cb ResetData</co-py> <span>| Will delete player/regions from the database.</span></li>
 					</ul>
-				</div>
-				<hr class="rounded">
-				<div class="permissions">
+				</section>
+				<section class="permissions">
+					<hr class="rounded">
 					<img src="/Images/Plugins/CasieBounce/Permissions.webp"><br>
 					<ul>
 						<li><co-py>CB.bounce</co-py> <span>| Allows the player to bounce in all the regions where 'RequirePermission' is set to true.</span></li>
 						<li><co-py>CB.bounce.‹region›</co-py> <span>| Allows the player to bounce in that specific region where 'RequirePermission' is set to true.</span></li>
 						<li><co-py>CB.admin</co-py> <span>| Allows the player to use all the commands.</span></li>
 					</ul>
-				</div>
-				<hr class="rounded">
-				<div class="config">
+				</section>
+				<section class="config">
+					<hr class="rounded">
 					<a href="https://github.com/CasieBarieDev/CasieBounce/blob/main/src/main/resources/config.yml" title="ｃｏｎｆｉｇ．ｙｍｌ"><img src="/Images/Plugins/CasieBounce/Config.webp"></a><br>
 					<ul><li>WorldGuardFlags: <em>Boolean</em> <span>| If the WorldGuard Flags are enabled or not. Once enabled you have to fully restart your server so the flags can be registered in WorldGuard.</span></li>
 					</ul><br>
@@ -87,12 +88,13 @@
 						<li>BounceBlocks: <em>List</em> <span>| The blocks where you can bounce on.</span></li>
 						<li>IsBlockBlacklist: <em>Boolean</em> <span>| If the blocklist above is a blacklist. When true you can bounce on every block except the ones above.</span></li>
 					</ul>
-				</div>
-				<hr class="rounded">
-				<div class="placeholders">
+				</section>
+
+				<section class="placeholders">
+					<hr class="rounded">
 					<img src="/Images/Plugins/CasieBounce/Placeholders.webp">
 					<ul class="no-indent">If you have <a href="https://www.spigotmc.org/resources/.6245/" title="ＰｌａｃｅｈｏｌｄｅｒＡＰＩ">PlaceholderAPI</a> installed you can view the bounce statistics of your server using placeholders:</ul><br>
-				</div>
+				</section>
 			</div>
 			<div class="placeholder-gen">
 				<form>

@@ -30,26 +30,30 @@
 	margin: 20px;
 	position: relative;
 	width: fit-content;
-}
-.project img {
+	overflow: hidden;
 	background-color: var(--gray-color);
 	border: 12px solid var(--bg-color-2);
-	border-bottom: 90px solid var(--bg-color-2);
 	box-shadow: 3px 3px 3px var(--bg-color-2);
-	height: auto;
 	max-width: 100%;
-	transition: opacity .5s ease;
+	height: fit-content;
+	transition: opacity .3s ease;
 	border-radius: 20px;
 	will-change: contents;
+}
+.project img {
+	transition: all .3s ease-in-out;
+	margin-bottom: -3px;
 }
 .project p {
 	color: var(--font-color);
 	font-size: 20px;
-	position: absolute;
-	bottom: 3%;
+	position: relative;
+	bottom: -10%;
 	text-align: center;
 	width: 100%;
+	background-color: var(--bg-color-2);
 }
+
 .project .lang, .project .version, .project .downloads {
 	color: var(--font-color-highlight);
 	display:inline-block;
@@ -58,5 +62,5 @@
 	color: var(--font-color-gray);
 	display:inline-block;
 }
-.project:hover {cursor: pointer;}
-.project:hover img{opacity: 0.3;}
+.project:hover {opacity: 0.5; cursor: pointer;}
+.project:hover img{transform: scale(1.2);}
