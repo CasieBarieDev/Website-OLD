@@ -1,3 +1,3 @@
 # THIS WEBSITE IS IN DEVELOPMENT!
 
-## https://casiebariedev.github.io/
+## View it [here](https://www.casiebarie.dev/)!

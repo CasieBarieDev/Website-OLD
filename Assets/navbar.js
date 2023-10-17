@@ -13,7 +13,7 @@ function start() {
     $(window).scroll(function () {scrolled();})
     function scrolled() {
         const nav = $('nav');
-        let opacity = 1- $(window).scrollTop() / 700;
+        let opacity = $(window).scrollTop() / 700;
         opacity = (opacity >= .5) ? opacity : .5;
         changeOpacity(nav, 'color', '--nav-bg-color', opacity);
         changeOpacity(nav, 'background-color', '--nav-bg-color', opacity);

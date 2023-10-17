@@ -57,22 +57,6 @@
 								&lt;/dependency&gt;
 							</code></pre>
 						</li>
-						<li>Add Javadoc (Optional)
-							<pre><code class="language-xml match-braces">
-								&lt;repository&gt;
-									&lt;id&gt;jitpack.io&lt;/id&gt;
-									&lt;url&gt;https://javadoc.jitpack.io&lt;/url&gt;
-								&lt;/repository&gt;
-							</code></pre>
-							<pre><code class="language-xml match-braces">
-								&lt;dependency&gt;
-									&lt;groupId&gt;dev.casiebarie&lt;/groupId&gt;
-									&lt;artifactId&gt;keeslib&lt;/artifactId&gt;
-									&lt;version&gt;VERSION&lt;/version&gt;
-									&lt;classifier&gt;javadoc&lt;/classifier&gt;
-								&lt;/dependency&gt;
-							</code></pre>
-						</li>
 					</ol>
 					<br>
 					<ul class="no-indent"><h1>GRADLE:</h1></ul>
@@ -113,15 +97,21 @@
 					<ul>
 						<li>
 							<pre><code class="language-java match-braces">
+							keeslib.createLogger()
+							</code></pre>
+							<p>↳ Changes the prefix of the plugin logger to the value `Prefix:` in the `plugin.yml` with `ChatColor` support. Override the default logger with this.</p>
+						</li>
+						<li>
+							<pre><code class="language-java match-braces">
 							keeslib.hasPlaceholerAPI();
 							</code></pre>
 							<p>↳ Returns true when <a href=https://www.spigotmc.org/resources/placeholderapi.6245/>PlaceholderAPI</a> is enabled in the server.</p>
 						</li>
 						<li>
 							<pre><code class="language-java match-braces">
-							keeslib.isLegacy(BukkitVersions lowestVersion, BukkitVersions highestVersion);
+							keeslib.isLegacy(Double lowestVerion, Double highestVersion);
 							</code></pre>
-							<p>↳ Checks if the server is legacy and disables the plugin if the version is not supported.</p>
+							<p>↳ Checks if the server is legacy and disables the plugin if the version is lower than the lowestversion. If the version is higher than the highest it will send a warning.</p>
 						</li>
 						<li>
 							<pre><code class="language-java match-braces">
@@ -131,30 +121,47 @@
 						</li>
 						<li>
 							<pre><code class="language-java match-braces">
-							keeslib.updateChecker(Integer recourceID, ChatColor borderColor, ChatColor textColor, String character, String permission, Double frequencyHours);
-							</code></pre>
-							<p>↳ A fancy UpdateChecker to let server owners know when there is an new update. It shows the new update with a download link.</p>
-							<u id="uc-preview">Click for preview.</u>
-							<div id="uc-preview-modal" class="modal" onclick="ucClose()">
-								<img class="modal-content" id="uc" alt="UpdateChecker" src="/Images/Plugins/KeesLib/uc-preview.webp">
-								<div id="caption">Preview of the UpdateChecker</div>
-							</div>
-						</li>
-						<li>
-							<pre><code class="language-java match-braces">
 							keeslib.hex(String msg);
 							</code></pre>
 							<p>↳ Translates all the #HEX codes in the message to ChatColor codes.</p>
 						</li>
 					</ul>
 					<br>
-					<ol class="no-indent"><h1>ENUMS</h1></ol>
+					<ol class="no-indent"><h1>UPDATECHECKER</h1>
+						<u id="uc-preview">Click for preview.</u>
+						<div id="uc-preview-modal" class="modal" onclick="ucClose()">
+							<img class="modal-content" id="uc" alt="UpdateChecker" src="/Images/Plugins/KeesLib/uc-preview.webp">
+							<div id="caption">Preview of the UpdateChecker</div>
+						</div></ol>
 					<ul>
 						<li>
 							<pre><code class="language-java match-braces">
-							BukkitVersions(Boolean isLegacy);
+								UpateChecker updateChecker = new keeslib.updateChecker(Integer recourceID)
 							</code></pre>
-							<p>↳ An enum with all the bukkitversions with IsLegacy to show if it is a legacy version.</p>
+							<p>↳ Use this to create the updatechecker. After that you can use these methods to set certain values.</p>
+							<ul>
+								<li>
+									<pre><code class="language-java match-braces">
+										updateChecker.setBorderColor(ChatColor color)
+									</code></pre>
+									<pre><code class="language-java match-braces">
+										updateChecker.setTextColor(ChatColor color)
+									</code></pre>
+									<pre><code class="language-java match-braces">
+										updateChecker.setBorderCharacter(Character character)
+									</code></pre>
+									<pre><code class="language-java match-braces">
+										updateChecker.setPermission(String permission)
+									</code></pre>
+									<pre><code class="language-java match-braces">
+										updateChecker.setUpdateFrequency(Long frequency, TimeUnit timeUnit)
+									</code></pre>
+								</li>
+							</ul>
+							<p>↳ After that you start the checking by calling:</p>
+							<pre><code class="language-java match-braces">
+								updateChecker.startChecking()
+							</code></pre>
 						</li>
 					</ul>
 				</div>

@@ -38,7 +38,10 @@
 	font-size: large;
 	left: 50%;
 	transform: translateX(-50%);
-} .home-bottom-text {box-shadow: 0 0 5px 3px var(--bg-color-1);}
+}
+.home-top-text p a img {transition: opacity .3s;}
+.home-top-text p a img:hover {opacity: .7;}
+.home-bottom-text {box-shadow: 0 0 5px 3px var(--bg-color-1);}
 
 .text {
 	line-height: 160%;

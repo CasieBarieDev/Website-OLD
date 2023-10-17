@@ -5,15 +5,15 @@
     --font-color-highlight: rgb(225, 225, 225);
     --font-color-gray: rgb(168, 168, 168);
     --font-color-gray-highlight: rgb(155, 155, 155);
-    --font-color-invert: rgb(0, 0, 0);
+    --font-color-invert: rgb(18, 18, 18);
     --font-color-invert-highlight: rgb(40, 40, 40);
     --font-color-title: rgb(156, 255, 215);
 
     --bg-color-1: rgb(28, 28, 28);
-    --bg-color-2: rgb(39, 39, 39);
+    --bg-color-2: rgb(40, 40, 40);
 
     --gray-color: rgb(65, 65, 65);
-    --nav-bg-color: rgb(0, 0, 0, 1);
+    --nav-bg-color: rgba(0, 0, 1, 0.5);
     --nav-font-color: rgb(255, 255, 255);
 }
 
@@ -45,7 +45,7 @@ body {
     right: 0;
     height: 100%;
     z-index: 100;
-    background-color: var(--nav-bg-color);
+    background-color: #000000;
     transition: 0.5s ease-out;
 }.transition.is-active {
     top: 0;
