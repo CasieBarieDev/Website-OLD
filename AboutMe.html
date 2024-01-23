@@ -41,7 +41,7 @@
 					</div>
 					<p>OR</p>
 					<div class="form">
-						<input type="text" id="discord" name="Discord" pattern="^.{3,32}#[0-9]{4}$|^@[a-z0-9_]{2,32}" required>
+						<input type="text" id="discord" name="Discord" pattern="(^(?=.{2,32}$)(?!.*[_.]{2})[a-z0-9._]+$)|(^.{3,32}#[0-9]{4}$|^@[a-z0-9_]{2,32})" required>
 						<label for="discord"><span class="required">* </span>Discord</label>
 					</div>
 				</div>

@@ -7,13 +7,14 @@
     --font-color-gray-highlight: rgb(155, 155, 155);
     --font-color-invert: rgb(18, 18, 18);
     --font-color-invert-highlight: rgb(40, 40, 40);
-    --font-color-title: rgb(156, 255, 215);
+    --font-color-title: rgb(255, 255, 255);
 
     --bg-color-1: rgb(28, 28, 28);
     --bg-color-2: rgb(40, 40, 40);
 
     --gray-color: rgb(65, 65, 65);
     --nav-bg-color: rgba(0, 0, 1, 0.5);
+    --mobile-nav-bg-color: rgb(15,15,15);
     --nav-font-color: rgb(255, 255, 255);
 }
 

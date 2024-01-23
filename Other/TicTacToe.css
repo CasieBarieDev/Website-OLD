@@ -46,7 +46,10 @@
 	position: relative;
 	text-align: left;
 	padding: 0 5vw;
-}.text .no-indent {padding-left: 1.5em; list-style-type: none}
+}
+.text .no-indent {padding-left: 1.5em; list-style-type: none}
+.text a {color: var(--font-color);}
+.text a:hover {color: var(--font-color-highlight)}
 
 .text div {
 	width: 100%;
