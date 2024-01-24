@@ -18,19 +18,25 @@
 }
 .home-top-text h4 {
 	font-size: 25px;
-	color: var(--logo-color);
-}
-.home-top-text p {font-size: 20px;}
-.home-top-text p a {
 	color: var(--font-color);
-	text-decoration: none;
 }
-.home-top-text p a:hover {color: var(--font-color-highlight);}
 
 .home-bottom-text {
 	box-shadow: 0 0 5px 3px var(--bg-color-1);
 	padding: 20px;
 }
+
+.text {
+	line-height: 160%;
+	font-size: large;
+	color: var(--font-color);
+	position: relative;
+	text-align: left;
+	padding: 0 5vw;
+}
+.text .no-indent {padding-left: 1.5em; list-style-type: none}
+.text a {color: var(--font-color);}
+.text a:hover {color: var(--font-color-highlight)}
 
 form {
 	background: var(--bg-color-2);

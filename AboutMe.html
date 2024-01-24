@@ -20,47 +20,51 @@
 			<div class="home-top-text">
 				<h1>ABOUT ME</h1>
 				<h4>Cas Barnard | CasieBarie</h4>
-				<p>
-					I'm a <span id="age" content="calcage()"></span> year old boy from the Netherlands who really likes to program some fun stuff.<br>
-					I purely develop things for fun and I thought it would be good idea to share it with the world!<br>
-					If you want to know more about me just join the <a href="https://discord.gg/ZptCBHeHyg">Discord Server</a> and ask!
-				</p>
 			</div>
 			<span id="down-button" onclick="window.scroll(0,800);"><span></span></span>
 			<div class="home-bottom-text">
-			<form action="https://formspree.io/f/meqdywyz" method="POST">
-				<h2>Contact Me</h2>
-				<div class="form">
-					<input type="text" id="name" name="Name" required>
-					<label for="name"><span class="required">* </span>Name</label>
+				<div class="text">
+					<hr class="rounded">
+					<ul class="no-indent"><li>
+						I'm a <span id="age" content="calcage()"></span> year old male from the Netherlands who really likes to develop some fun stuff.
+						Besides my job as a theatre technician I really enjoy developing some fun stuff. So I purely develop things for fun and I thought it would be good idea to share it with the world!<br>
+						If you want to know more about me just join the <a href="https://discord.gg/ZptCBHeHyg">Discord Server</a> and ask!
+					</li></ul>
+					<hr class="rounded">
 				</div>
-				<div class="form-inline">
+				<form action="https://formspree.io/f/meqdywyz" method="POST">
+					<h2>Contact Me</h2>
 					<div class="form">
-						<input type="email" id="email" name="Email" required>
-						<label for="email"><span class="required">* </span>Email</label>
+						<input type="text" id="name" name="Name" required>
+						<label for="name"><span class="required">* </span>Name</label>
 					</div>
-					<p>OR</p>
+					<div class="form-inline">
+						<div class="form">
+							<input type="email" id="email" name="Email" required>
+							<label for="email"><span class="required">* </span>Email</label>
+						</div>
+						<p>OR</p>
+						<div class="form">
+							<input type="text" id="discord" name="Discord" pattern="(^(?=.{2,32}$)(?!.*[_.]{2})[a-z0-9._]+$)|(^.{3,32}#[0-9]{4}$|^@[a-z0-9_]{2,32})" required>
+							<label for="discord"><span class="required">* </span>Discord</label>
+						</div>
+					</div>
 					<div class="form">
-						<input type="text" id="discord" name="Discord" pattern="(^(?=.{2,32}$)(?!.*[_.]{2})[a-z0-9._]+$)|(^.{3,32}#[0-9]{4}$|^@[a-z0-9_]{2,32})" required>
-						<label for="discord"><span class="required">* </span>Discord</label>
+						<select id="topics" name="Topic" required>
+							<option value="" selected="" disabled=""></option>
+							<option value="Minecraft Plugins">Minecraft Plugins</option>
+							<option value="Other Projects">Other Projects</option>
+							<option value="Website">Website</option>
+							<option value="About Me (CasieBarie)">About Me (CasieBarie)</option>
+						</select>
+						<label for="topics"><span class="required">* </span>Topic</label>
 					</div>
-				</div>
-				<div class="form">
-					<select id="topics" name="Topic" required>
-						<option value="" selected="" disabled=""></option>
-						<option value="Minecraft Plugins">Minecraft Plugins</option>
-						<option value="Other Projects">Other Projects</option>
-						<option value="Website">Website</option>
-						<option value="About Me (CasieBarie)">About Me (CasieBarie)</option>
-					</select>
-					<label for="topics"><span class="required">* </span>Topic</label>
-				</div>
-				<div class="form">
-					<textarea id="message" name="Message" cols="30" rows="5" required></textarea>
-					<label for="message"><span class="required">* </span>Message</label>
-				</div>
-				<button id="submit-btn" type="button">Send Message</button>
-			</form>
+					<div class="form">
+						<textarea id="message" name="Message" cols="30" rows="5" required></textarea>
+						<label for="message"><span class="required">* </span>Message</label>
+					</div>
+					<button id="submit-btn" type="button">Send Message</button>
+				</form>
 			</div>
 		</div>
 	</div>

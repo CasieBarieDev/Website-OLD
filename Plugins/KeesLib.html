@@ -32,7 +32,7 @@
 			<div class="text">
 				<hr class="rounded">
 				<ul class="no-indent"><p>This is a library I use for my plugins to make my life easier. But you can use it too! How? Just take a look!
-					<br>It contains a few methos for checking bukkit versions and if certain dependencies are enabled on the server. It also has an amazing UpdateChecker!</p></ul>
+					<br>It contains a few methods for checking bukkit versions and if certain dependencies are enabled on the server. It also has an amazing UpdateChecker!</p></ul>
 				<hr class="rounded">
 				<div class="setup">
 					<img src="/Images/Plugins/KeesLib/setup.webp"><br>
@@ -97,33 +97,39 @@
 					<ul>
 						<li>
 							<pre><code class="language-java match-braces">
-							keeslib.createLogger()
+							.createLogger()
 							</code></pre>
 							<p>↳ Changes the prefix of the plugin logger to the value `Prefix:` in the `plugin.yml` with `ChatColor` support. Override the default logger with this.</p>
 						</li>
 						<li>
 							<pre><code class="language-java match-braces">
-							keeslib.hasPlaceholerAPI();
+							.hasPlaceholerAPI();
 							</code></pre>
 							<p>↳ Returns true when <a href=https://www.spigotmc.org/resources/placeholderapi.6245/>PlaceholderAPI</a> is enabled in the server.</p>
 						</li>
 						<li>
 							<pre><code class="language-java match-braces">
-							keeslib.isLegacy(Double lowestVerion, Double highestVersion);
+							.isLegacy(Double lowestVerion, Double highestVersion);
 							</code></pre>
 							<p>↳ Checks if the server is legacy and disables the plugin if the version is lower than the lowestversion. If the version is higher than the highest it will send a warning.</p>
 						</li>
 						<li>
 							<pre><code class="language-java match-braces">
-							keeslib.hasVault(Boolean economy, Boolean permissions, Boolean chat);
+							.hasVault(Boolean economy, Boolean permissions, Boolean chat);
 							</code></pre>
 							<p>↳ Returns true if <a href="https://www.spigotmc.org/resources/vault.34315/">Vault</a> is enabled and all the servicemanagers are registered.</p>
 						</li>
 						<li>
 							<pre><code class="language-java match-braces">
-							keeslib.hex(String msg);
+							.hex(String msg);
 							</code></pre>
 							<p>↳ Translates all the #HEX codes in the message to ChatColor codes.</p>
+						</li>
+						<li>
+							<pre><code class="language-java match-braces">
+							.roundNumber(Number number);
+							</code></pre>
+							<p>↳ Rounds the specified number and returns it as a String. (E.g. 3748 -> 3.7K)</p>
 						</li>
 					</ul>
 					<br>
@@ -142,19 +148,19 @@
 							<ul>
 								<li>
 									<pre><code class="language-java match-braces">
-										updateChecker.setBorderColor(ChatColor color)
+										.setBorderColor(ChatColor color)
 									</code></pre>
 									<pre><code class="language-java match-braces">
-										updateChecker.setTextColor(ChatColor color)
+										.setTextColor(ChatColor color)
 									</code></pre>
 									<pre><code class="language-java match-braces">
-										updateChecker.setBorderCharacter(Character character)
+										.setBorderCharacter(Character character)
 									</code></pre>
 									<pre><code class="language-java match-braces">
-										updateChecker.setPermission(String permission)
+										.setPermission(String permission)
 									</code></pre>
 									<pre><code class="language-java match-braces">
-										updateChecker.setUpdateFrequency(Long frequency, TimeUnit timeUnit)
+										.setUpdateFrequency(Long frequency, TimeUnit timeUnit)
 									</code></pre>
 								</li>
 							</ul>
