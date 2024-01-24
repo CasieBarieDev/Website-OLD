@@ -23,6 +23,9 @@
 			padding: 5px 0 5px 5px;
 			box-shadow: 0 0 5px 3px;
 		}
+		.Logo {
+			display: flex;
+		}
 		.Logo a {
 			float: left;
 			color: var(--secondary-color);
@@ -30,7 +33,7 @@
 			font-size: 26px;
 			font-weight: 600;
 			line-height: 44px;
-			padding-left: 20px;
+			margin-left: 20px;
 			opacity: 1;
 			transition: opacity 400ms;
 		} .Logo img {
@@ -124,9 +127,8 @@
 		.mobile-item.current {text-decoration: underline var(--primary-color) !important; text-underline-position: under;}
 
 		@media (min-width: 965px) {.mobile-menu, .hamburger {display: none;} .menu {display: flex;}}
-		@media (max-width: 430px) {.Logo a {font-size: 20px;}}
-		@media (max-width: 365px) {.Logo a {font-size: 17px;}}
-		@media (max-width: 330px) {.Logo a {font-size: 13px;}}
+		@media (max-width: 430px) {.Logo a {font-size: 5vw;}}
+		@media (max-width: 310px) {.Logo a {font-size: 4vw;}}
 	</style>
 </head>
 <body>
