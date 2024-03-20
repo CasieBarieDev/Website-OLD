@@ -3,12 +3,69 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta name="description" content="A bot for a friend.">
 	<title>CasieBarie Development</title>
 	<link href="/Images/CasieBarie-Pose.webp" rel="icon">
 	<link href="/Assets/default.css" rel="stylesheet" type="text/css"/>
-	<link href="LucasBot.css" rel="stylesheet" type="text/css"/>
 	<script defer crossorigin="anonymous" src="https://kit.fontawesome.com/0c4268d390.js"></script>
-	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<style>
+		.home-top {
+			background-position: top center;
+			background-attachment: scroll;
+			background-size: cover;
+			height: 100vh;
+			max-width: 100%;
+			box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+		}
+		.home-top-text {
+			top: 0;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			height: 100vh;
+			font-size: 4vw;
+			color: var(--font-color);
+			text-shadow: var(--font-color-invert) 1px 1px 1px;
+		}
+		.home-top-text h1 {
+			position: relative;
+			top: 30%;
+			color: var(--font-color-title)
+		}
+		.home-top-text h2 {
+			position: relative;
+			top: 32%;
+			font-size: 2vw;
+		}
+		.home-top-text h3 {
+			position: relative;
+			top: 33%;
+			font-size: 1.1vw;
+		}
+		.home-top-text p {
+			display: inline-block;
+			position: absolute;
+			bottom: 15%;
+			font-size: large;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		.home-top-text p a img {transition: opacity .3s;}
+		.home-top-text p a img:hover {opacity: .7;}
+		.home-bottom-text {box-shadow: 0 0 5px 3px var(--bg-color-1);}
+
+		.text {
+			line-height: 160%;
+			font-size: large;
+			color: var(--font-color);
+			position: relative;
+			text-align: left;
+			padding: 0 5vw;
+		}
+		.text .no-indent {padding-left: 1.5em; list-style-type: none}
+		.text img {max-width: 100%;}
+	</style>
 </head>
 <body class="LucasBot" id="body" data-currentnav="Other Projects">
 <div class="transition is-active"></div>
@@ -22,20 +79,22 @@
 				<h2>A <i class="fa-brands fa-discord"></i> discord <i class="fa-brands fa-discord"></i> bot for a friend!</h2>
 				<h3>(For his school research project)</h3>
 				<p>
-					<a href="https://github.com/CasieBarie" target="_blank"><img src="https://img.shields.io/github/license/CasieBarie/LucasBot-pws?label=GitHub&logo=github&style=plastic" alt="Github"></a>
+					<a href="https://github.com/CasieBarie" target="_blank"><img src="https://img.shields.io/github/license/CasieBarie/LucasBot-pws?label=GitHub&logo=github&style=plastic" alt="Github" height="18px" width="auto"></a>
 				</p>
 			</div>
 			<span id="down-button" onclick="window.scroll(0,800);"><span></span></span>
 			<div class="home-bottom-text"></div>
 			<div class="text">
 				<hr class="rounded">
-				<img src="/Images/Other/LucasBot/About.webp" alt="About">
+				<img src="/Images/Other/LucasBot/About.webp" alt="About" height="84px" width="auto">
 				<ul class="no-indent">
-					My friend once asked if I could help him with his school research project. We decided to create a simple discord bot.
-					He presented this project and got a high grade! This bot has a few small but fun features. (it is in dutch)
+					<li>
+						My friend once asked if I could help him with his school research project. We decided to create a simple discord bot.
+						He presented this project and got a high grade! This bot has a few small but fun features. (it is in dutch)
+					</li>
 				</ul>
 				<hr class="rounded">
-				<img src="/Images/Other/LucasBot/Features.webp" alt="Features">
+				<img src="/Images/Other/LucasBot/Features.webp" alt="Features" height="84px" width="auto">
 				<ul>
 					<li>Message when someone joins</li>
 					<li>React to good morning, good afternoon and good evening</li>

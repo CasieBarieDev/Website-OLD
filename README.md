@@ -1,3 +1,3 @@
-# THIS WEBSITE IS IN DEVELOPMENT!
+# The Website of CasieBarie Development
 
-## View it [here](https://www.casiebarie.dev/)!
+## *View it [here](https://www.casiebarie.dev/)!*

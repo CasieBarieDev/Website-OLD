@@ -12,7 +12,7 @@
     --bg-color-1: rgb(28, 28, 28);
     --bg-color-2: rgb(40, 40, 40);
 
-    --gray-color: rgb(65, 65, 65);
+    --gray-color: rgb(86, 86, 86);
     --nav-bg-color: rgba(0, 0, 1, 0.5);
     --mobile-nav-bg-color: rgb(15,15,15);
     --nav-font-color: rgb(255, 255, 255);
@@ -78,6 +78,36 @@ hr.rounded {
     border-top: 4px solid var(--gray-color);
     border-radius: 5px;
 }
+
+.home-top {
+    background-position: top center;
+    background-attachment: scroll;
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+.home-top-text {
+    top: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 4vw;
+    color: var(--font-color);
+    text-shadow: var(--font-color-invert) 1px 2px 3px;
+}
+.home-top-text h1 {
+    position: relative;
+    top: 30%;
+    color: var(--font-color-title)
+}
+.home-top-text h2 {
+    position: relative;
+    top: 32%;
+    font-size: 2vw;
+}
+.home-bottom-text {box-shadow: 0 0 5px 3px var(--bg-color-1);}
 
 @keyframes transitionIn {
     from {

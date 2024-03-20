@@ -21,7 +21,6 @@ window.onload = () => {
     }
 }
 
-window.onunload = function(){};
 window.onpagehide = function(){loaded()};
 window.addEventListener('popstate', function () {loaded();});
 if (document.readyState !== 'loading') {loaded();

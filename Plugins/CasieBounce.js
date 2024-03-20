@@ -1,36 +1,66 @@
 if (document.readyState !== 'loading') {CasieBounce();
 } else {document.addEventListener('DOMContentLoaded', function () {CasieBounce();});}
 function CasieBounce() {
-    const type =  document.getElementById("type"),
+    const
+        plugin_version = document.getElementById("version"),
+        type = document.getElementById("type"),
         rounded = document.getElementById("rounded"),
+        format = document.getElementById("format"),
+        name_format = document.getElementById("name-format"),
         region = document.getElementById("region"),
         region_name = document.getElementById("region-name"),
         world_name = document.getElementById("world-name"),
-        format = document.getElementById("format"),
         position = document.getElementById("position"),
         result = document.getElementById("result"),
-        preview = document.getElementById("preview");
-    rounded.addEventListener("change", updatetext);
-    region_name.addEventListener("input", updatetext);
-    world_name.addEventListener("input", updatetext);
-    position.addEventListener("input", updatetext);
+        preview = document.getElementById("preview")
+    let isOldVersion
+    plugin_version.selectedIndex = 1;
     type.selectedIndex = 0;
     rounded.selectedIndex = 1;
     region.selectedIndex = 1;
     format.selectedIndex = -1;
+    name_format.selectedIndex = -1;
 
-    function typeChange() {
+    function versionchange() {
+        isOldVersion = (plugin_version.selectedIndex === 1);
+        formatChange(); updateText(); valid();
+    } plugin_version.addEventListener("change", versionchange);
+    versionchange();
+
+    function typechange() {
         if(type.value !== "Total") {format.disabled = false;
         } else {
             format.disabled = true;
             format.selectedIndex = -1;
-        } if(type.value === "Leaderboard") {position.disabled = false;
+        } if(type.value === "Leaderboard") {
+            position.disabled = false;
+            document.querySelectorAll("#format option").forEach(opt => {if(opt.value === "Name") {opt.hidden = false;}});
         } else {
             position.disabled = true;
             position.value = '';
-        } updatetext(); formatChange(); valid();
-    } type.addEventListener("change", typeChange);
-    typeChange()
+            document.querySelectorAll("#format option").forEach(opt => {if(opt.value === "Name") {opt.hidden = true;}});
+        } updateText(); formatChange(); valid();
+    } type.addEventListener("change", typechange);
+    typechange();
+
+    function formatChange() {
+        if(type.value !== "Number" && format.value === "Name") {
+            rounded.disabled = true;
+            rounded.selectedIndex = -1;
+        } else {
+            rounded.disabled = false;
+            rounded.selectedIndex = 1;
+        } if(type.value !== "Total" && !isOldVersion) {
+            if(format.value === "Number") {
+                name_format.disabled = true;
+                name_format.selectedIndex = -1;
+            } else {name_format.disabled = false;}
+        } else {
+            name_format.disabled = true;
+            name_format.selectedIndex = -1;
+        } updateText(); valid();
+    } format.addEventListener("change", formatChange);
+    formatChange();
 
     function regionChange() {
         if(region.value === "Yes") {
@@ -41,82 +71,38 @@ function CasieBounce() {
             world_name.disabled = true;
             region_name.value = '';
             world_name.value = '';
-        } updatetext(); valid();
+        } updateText(); valid();
     } region.addEventListener("change", regionChange);
-    regionChange()
-
-    function formatChange() {
-        if(type.value === "Leaderboard" && format.value === "Name") {
-            rounded.disabled = true;
-            rounded.selectedIndex = -1;
-        } else {
-            rounded.disabled = false;
-            rounded.selectedIndex = 1;
-        }
-        updatetext(); valid()
-    } format.addEventListener("change", formatChange);
-    formatChange();
+    regionChange();
 
     function valid() {
         const allForm = document.querySelectorAll('.form input, .form select');
         for (let form of allForm) {
             if(!form.disabled && form.value === '' || !form.checkValidity()) {form.classList.add("invalid");
             } else {form.classList.remove("invalid");}
-        } updatetext();
+        } updateText();
     }
-    region_name.addEventListener("input", valid);
-    world_name.addEventListener("input", valid);
-    position.addEventListener("input", valid);
 
-    function updatetext() {
+    function updateText() {
         let output = "%cb_";
         let previewtext = "";
-        switch (type.value) {
-            case "Total":
-                output += "total";
-                if(region.value === "Yes") {output += "region_" + region_name.value + ":" + world_name.value;}
-                if(rounded.value === "Yes") {
-                    output += "_NUMBER-ROUNDED%";
-                    previewtext += "3.7k";
-                } else {
-                    output += "_NUMBER-FULL%";
-                    previewtext += "3745";
-                } break;
-            case "Player":
-                output += "player";
-                if(region.value === "Yes") {output += "region_" + region_name.value + ":" + world_name.value;}
-                output += "_" + format.value.toUpperCase();
-                if(format.value !== "Name") {
-                    if(format.value === "Both") {previewtext += "CasieBarie: ";}
-                    if(rounded.value === "Yes") {
-                        output += "-ROUNDED%";
-                        previewtext += "3.7k";
-                    } else {
-                        output += "-FULL%";
-                        previewtext += "3745";
-                    }
-                } else {
-                    output += "%"
-                    previewtext = "CasieBarie";
-                } break;
-            case "Leaderboard":
-                output += "leaderboard";
-                if(region.value === "Yes") {output += "region_" + region_name.value + ":" + world_name.value;}
-                output += "_" + position.value + "_";
-                output += format.value.toUpperCase();
-                if(format.value !== "Name") {
-                    if(format.value === "Both") {previewtext += "CasieBarie: ";}
-                    if(rounded.value === "Yes") {
-                        output += "-ROUNDED%";
-                        previewtext += "3.7k";
-                    } else {
-                        output += "-FULL%";
-                        previewtext += "3745";
-                    }
-                } else {
-                    output += "%"
-                    previewtext = "CasieBarie";
-                } break;
+        output += type.value.toLowerCase();
+        if(region.value === "Yes") {output += "region_" + region_name.value + ":" + world_name.value + "_";} else {output += "_";}
+        if(type.value === "Leaderboard") {output += position.value + "_";}
+        output += format.value.toUpperCase();
+        if(name_format.value !== "") {output += "-" + name_format.value.toUpperCase();}
+        if(format.value !== "Number" && type.value !== "Total") {
+            if(name_format.value === "Displayname") {previewtext += "[OWNER] ";
+            } previewtext += "CasieBarie";
+            if(format.value === "Both") {previewtext += ":";}
+        }
+        if(type.value !== "Total") {output += "-";}
+        if(rounded.value === "Yes") {
+            output += "ROUNDED%";
+            previewtext += " 3.7k"
+        } else {
+            output += "FULL%";
+            previewtext += " 3745"
         }
         let isValid = true;
         const allForm = document.querySelectorAll('.form input, .form select');
@@ -131,6 +117,11 @@ function CasieBounce() {
             result.classList.add("invalid")
             preview.innerHTML = "INVALID";
             preview.classList.add("invalid")
-        }
-    } copy();
+        } copy();
+    }
+    region_name.addEventListener("input", valid);
+    world_name.addEventListener("input", valid);
+    position.addEventListener("input", valid);
+    name_format.addEventListener("change", valid);
+    rounded.addEventListener("change", valid);
 }
