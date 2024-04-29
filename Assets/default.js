@@ -9,12 +9,12 @@ function changeOpacity(element, cssname, varcolor, opacity) {
 
 //Smooth transition
 window.onload = () => {
-    const transitionELM = document.querySelector('.transition')
+    const transitionELM = document.querySelector('body')
     setTimeout(() => {
-        transitionELM.classList.remove('is-active')
+        transitionELM.classList.add('fade')
     }, 500)
     window.transitionToPage = function(href) {
-        transitionELM.classList.add('is-active')
+        transitionELM.classList.remove('fade')
         setTimeout(() => {
             window.location.href = href;
         }, 500)
@@ -26,7 +26,7 @@ window.addEventListener('popstate', function () {loaded();});
 if (document.readyState !== 'loading') {loaded();
 } else {document.addEventListener('DOMContentLoaded', function () {loaded();});}
 function loaded() {
-    //Smooth transition 2 and scroll
+
     const includes = $('[data-include]')
     $.each(includes, function () {
         const file = $(this).data('include') + '.html'
@@ -34,7 +34,7 @@ function loaded() {
     })
 
     setTimeout(() => {
-        document.querySelector('.transition').classList.remove('is-active')
+        document.querySelector('body').classList.add('fade')
     }, 500)
 
     $(document).scroll(function() {
@@ -47,7 +47,7 @@ function copy() {
     const code = $('co-py')
     $.each(code, function () {
         const text = $(this).clone().children().remove().end().text();
-        $(this).html(text + "<span class=\"tooltiptext\" class=\"myTooltip\">𝘾𝙤𝙥𝙮 𝙏𝙤 𝘾𝙡𝙞𝙥𝙗𝙤𝙖𝙧𝙙</span>");
+        $(this).html(text + "<span class=\"tooltiptext myTooltip\">𝘾𝙤𝙥𝙮 𝙏𝙤 𝘾𝙡𝙞𝙥𝙗𝙤𝙖𝙧𝙙</span>");
         $(this).click(function () {
             navigator.clipboard.writeText(text).then(r => {});
             $(this).find('span').text("𝘾𝙤𝙥𝙞𝙚𝙙")

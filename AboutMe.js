@@ -28,6 +28,13 @@ function aboutme() {
                     this.classList.remove('valid');
                     this.classList.remove('invalid');
                 }
+
+                const charCount = this.value.length;
+                const count = this.nextElementSibling;
+                if(count.classList.contains("count")) {
+                    count.innerHTML = charCount + '/' + this.maxLength;
+                }
+
                 checkForm();
             });
         }

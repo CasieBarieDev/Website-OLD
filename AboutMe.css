@@ -42,7 +42,7 @@ form .form {
 	margin-bottom: 16px;
 }
 form .form input,
-/*TEST*/form .form select,
+form .form select,
 form .form textarea {
 	padding: 8px;
 	width: 100%;
@@ -53,6 +53,13 @@ form .form textarea {
 	color: var(--font-color);
 	transition: top .3s ease;
 }
+
+form .form textarea {
+	min-height: 110px;
+	max-height: 110px;
+	overflow: hidden;
+}
+
 form .form label {
 	position: absolute;
 	top: 50%;
@@ -120,6 +127,15 @@ form .form input ~ label .required {color: var(--font-color-gray)}
 form .form textarea:required ~ label .required,
 form .form select:required ~ label .required,
 form .form input:required ~ label .required {color: red;}
+
+form .form .count {
+	display: none;
+}
+
+form .form input:focus ~ .count,
+form .form textarea:focus ~ .count {
+	display: block;
+}
 
 form .form select option {
 	background-color: var(--bg-color-2);
