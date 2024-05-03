@@ -1,3 +1,1 @@
-# The Website of CasieBarie Development
-
-## *View it [here](https://www.casiebarie.dev/)!*
+# The source code of [CasieBarie Development](https://www.casiebarie.dev/)!

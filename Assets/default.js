@@ -9,12 +9,12 @@ function changeOpacity(element, cssname, varcolor, opacity) {
 
 //Smooth transition
 window.onload = () => {
-    const transitionELM = document.querySelector('body')
+    const transitionELM = document.querySelector('#everything')
     setTimeout(() => {
-        transitionELM.classList.add('fade')
+        transitionELM.classList.add('visible')
     }, 500)
     window.transitionToPage = function(href) {
-        transitionELM.classList.remove('fade')
+        transitionELM.classList.remove('visible')
         setTimeout(() => {
             window.location.href = href;
         }, 500)
@@ -34,7 +34,7 @@ function loaded() {
     })
 
     setTimeout(() => {
-        document.querySelector('body').classList.add('fade')
+        document.querySelector('#everything').classList.add('visible')
     }, 500)
 
     $(document).scroll(function() {

@@ -21,10 +21,10 @@
 				<h1>📚 KeesLib 📚</h1>
 				<h2>A simple library for my plugins!</h2>
 				<p>
-					<a href="https://github.com/CasieBarieDev/KeesLib/releases/latest"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/CasieBarieDev/KeesLib?label=Release&logo=github&style=plastic" height="18px" width="auto"></a>
+					<a href="https://central.sonatype.com/artifact/dev.casiebarie/KeesLib"><img alt="Maven Release" src="https://img.shields.io/maven-central/v/dev.casiebarie/KeesLib?logo=apachemaven&label=Maven%20Central&style=plastic" height="18px" width="auto"></a>
+					<a href="https://javadoc.io/doc/dev.casiebarie/KeesLib"><img alt="Javadocs" src="https://img.shields.io/badge/Javadocs-%20-A33333?logo=readthedocs&logoColor=FFFFFF&style=plastic" height="18px" width="auto"></a>
 					<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/CasieBarieDev/KeesLib?color=red&label=Size&logo=Github&style=plastic" height="18px" width="auto">
 					<a href="https://github.com/CasieBarieDev/KeesLib/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/CasieBarieDev/KeesLib?label=License&logo=Github&style=plastic" height="18px" width="auto"></a>
-					<a href="https://jitpack.io/#dev.casiebarie/keeslib"><img alt="JitPack" src="https://img.shields.io/jitpack/version/dev.casiebarie/keeslib?color=lime&label=JitPack&logo=azurepipelines&style=plastic" height="18px" width="auto"></a>
 				</p>
 			</div>
 			<span id="down-button" onclick="window.scroll(0,700);"><span></span></span>
@@ -37,55 +37,35 @@
 				<div class="setup">
 					<img src="/Images/Plugins/KeesLib/setup.webp" alt="Setup" height="85px" width="auto"><br>
 					<ul class="no-indent"><li><h1>MAVEN:</h1></li></ul>
-					<ol>
-						<li>Add the JitPack repository to your build file
-							<pre><code class="language-xml match-braces">
-								&lt;repositories&gt;
-									&lt;repository&gt;
-										&lt;id&gt;jitpack.io&lt;/id&gt;
-										&lt;url&gt;https://jitpack.io&lt;/url&gt;
-									&lt;/repository&gt;
-								&lt;/repositories&gt;
-							</code></pre>
-						</li>
-						<li>Add the dependency
+					<ul class="no-indent">
+						<li>
 							<pre><code class="language-xml match-braces">
 								&lt;dependency&gt;
 									&lt;groupId&gt;dev.casiebarie&lt;/groupId&gt;
-									&lt;artifactId&gt;keeslib&lt;/artifactId&gt;
+									&lt;artifactId&gt;KeesLib&lt;/artifactId&gt;
 									&lt;version&gt;VERSION&lt;/version&gt;
 								&lt;/dependency&gt;
 							</code></pre>
 						</li>
-					</ol>
+					</ul>
 					<br>
 					<ul class="no-indent"><li><h1>GRADLE:</h1></li></ul>
-					<ol>
-						<li>Add the JitPack repository to your build file
-							<pre><code class="language-gradle">
-								allprojects {
-									repositories {
-										...
-										maven {url 'https://jitpack.io'}
-									}
-								}
-							</code></pre>
-						</li>
-						<li>Add the dependency
+					<ul class="no-indent">
+						<li>
 							<pre><code class="language-gradle">
 								dependencies {
 									...
-									implementation 'dev.casiebarie:keeslib:VERSION'
+									implementation 'dev.casiebarie:KeesLib:VERSION'
 								}
 							</code></pre>
 						</li>
-					</ol>
+					</ul>
 				</div>
 				<hr class="rounded">
 				<div class="usage">
 					<img src="/Images/Plugins/KeesLib/usage.webp" alt="Usage" height="85px" width="auto"><br>
 					<ol class="no-indent"><li><h1>START</h1></li></ol>
-					<ul>
+					<ul class="no-indent">
 						<li><pre><code class="language-java match-braces">
 							import dev.casiebarie.keeslib.KeesLib;
 
@@ -129,7 +109,7 @@
 							<pre><code class="language-java match-braces">
 							.roundNumber(Number number);
 							</code></pre>
-							<p>↳ Rounds the specified number and returns it as a String. (E.g. 3748 -> 3.7K)</p>
+							<p>↳ Rounds the specified number and returns it as a String. (E.g. 3748 to 3.7K)</p>
 						</li>
 					</ul>
 					<br>
@@ -171,6 +151,7 @@
 						</li>
 					</ul>
 				</div>
+				<hr class="rounded">
 			</div>
 		</div>
 	</div>
