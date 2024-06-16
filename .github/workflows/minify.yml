@@ -23,9 +23,9 @@ jobs:
       - run: npm install -g html-minifier
 
       # Use CLI tools to minify, overwriting existing files
-      - run: for i in *.js; do terser $i --compress -o $i; done
-      - run: for i in *.css; do csso $i -o $i; done
-      - run: for i in *.html; do html-minifier --collapse-boolean-attributes --collapse-whitespace --minify-css --minify-js --minify-urls --remove-attribute-quotes --remove-comments $i -o $i; done
+      - run: for i in $(find -name '*.js'); do terser $i --compress -o $i; done
+      - run: for i in $(find -name '*.css'); do csso $i -o $i; done
+      - run: for i in $(find -name '*.html'); do html-minifier --collapse-boolean-attributes --collapse-whitespace --minify-css --minify-js --minify-urls --remove-attribute-quotes --remove-comments $i -o $i; done
       
       # Push changes to `gh-pages` branch
       - run: |
