@@ -2,44 +2,98 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta name="description" content="Welcome, here you can find almost all the things I develop! I mainly focus on Minecraft Spigot plugins. But sometimes I decide to make something else.">
 	<title>CasieBarie Development</title>
-	<link href="/Images/mascot.webp" rel="icon">
-	<link href="/Assets/default.css" rel="stylesheet" type="text/css"/>
-	<link href="index.css" rel="stylesheet" type="text/css"/>
-	<link rel="canonical" href="https://casiebarie.dev/">
-	<script defer crossorigin="anonymous" src="https://kit.fontawesome.com/0c4268d390.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Welcome, here you can find almost all the things I develop!">
+	<link href="/images/mascot.webp" rel="icon">
+	<link href="/assets/css/default.css" rel="stylesheet" type="text/css"/>
+	<script defer src="https://kit.fontawesome.com/0c4268d390.js" crossorigin="anonymous"></script>
 	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<style>
+		ul li {
+			margin: 10px 0;
+		}
+
+		.languages i {
+			text-wrap: nowrap;
+			margin: 0 .2em;
+			font-size: 3.7vw;
+		}
+
+		.languages i.fa-java {color: #f89820;}
+		.languages i.fa-python {color: #4584b6;}
+		.languages i.fa-html5 {color: #e34c26;}
+		.languages i.fa-css3-alt {color: #264ed4;}
+		.languages i.fa-js {color: #f7df1e;}
+	</style>
 </head>
-<body class="Home" id="body" data-currentnav="Home">
-<div id="everything">
+<body>
+<div id="background" style="background-image: url('/images/code.webp');"></div>
+<div id="body" data-currentnav="HOME">
+	<div data-include="/assets/menu" data-js="false"></div>
 	<div id="wrap">
-		<div data-include="/Assets/navbar" data-js="true"></div>
 		<div id="page">
-			<div class="home-top" id="scroll" style="background-image: url('Images/code.webp')"></div>
-			<img alt="logo" class="base-element" id="home-logo" src="Images/logo.webp" height="500" width="500"/>
-			<span id="down-button" onclick="window.scroll(0,700);"><span></span></span>
-			<div class="home-bottom">
-				<h1>👋 Welcome, here you can find almost all the things I develop!</h1>
-				<p>
-					<br>
-					I mainly focus on <span onclick="transitionToPage('/Plugins')">Minecraft Spigot plugins</span>. But sometimes I decide to make something else.<br>
-					For each Minecraft plugin there will be a installation guide and info about the configuration files.<br>
-					All the projects will have a preview or a download link on the page.<br>Have Fun!<br>
-				</p>
-				<hr class="rounded">
-				<h2>🧬 Languages 🧬</h2>
-				<img loading="lazy" class="image" alt="top-langs" width="650" height="165" src="https://githubstats.casiebarie.dev/api/top-langs/?username=casiebarie&layout=compact&theme=github_dark&langs_count=10&hide_progress=true&hide_border=true&text_color=a8a8a8&bg_color=1c1c1c&hide_title=true&card_width=450"/>
-				<hr class="rounded">
-				<h2><i class="fa-brands fa-github"></i> GitHub Stats <i class="fa-brands fa-github"></i></h2>
-				<img loading="lazy" class="image" alt="github-stats" width="650" height="256" src="https://githubstats.casiebarie.dev/api?username=casiebarie&show_icons=true&theme=github_dark&include_all_commits=true&text_color=a8a8a8&icon_color=79afff&bg_color=1c1c1c&hide_title=true&hide_border=true&text_bold=false&card_width=450">
-				<hr class="rounded">
+			<div class="row top">
+				<div class="left">
+					<img src="/images/logo.webp" alt="Logo" width="500" height="500"/>
+				</div>
+				<div class="right">
+					<div class="text">
+						<h1>Welcome!</h1>
+						<p>
+							I'm CasieBarie, a developer with a love for coding and creating innovative solutions. What started as a passion has grown into a fulfilling journey of learning and building projects that I am excited to share with you.<br><br>
+						</p>
+						<p class="gray">
+							I invite you to explore my portfolio and see the projects I've been working on. Each one represents a step in my journey as a developer, filled with learning experiences and creative challenges.<br><br>
+						</p>
+					</div>
+				</div>
+			</div>
+			<span id="down-button"><span></span></span>
+			<div class="row" id="scrollto">
+				<div class="left">
+					<div class="text">
+						<h2>What I Enjoy Creating</h2>
+						<ul class="gray">
+							<li><b>Minecraft Plugins:</b><br>Developing custom plugins for <a href="https://minecraft.net/" target="_blank" title="Miecraft">Minecraft <i class="fa-solid fa-arrow-up-right-from-square"></i></a>, using Java to add unique features and improve gameplay experiences.</li>
+							<li><b>Discord Bots:</b><br>Creating engaging and useful bots for <a href="https://discord.com/" target="_blank" title="Discord">Discord <i class="fa-solid fa-arrow-up-right-from-square"></i></a>, leveraging <a href="https://jda.wiki/" target="_blank" title="JDA">JDA <i class="fa-solid fa-arrow-up-right-from-square"></i></a> to enhance server functionalities and interactions.</li>
+							<li><b>Web Projects:</b><br>Developing interactive and visually appealing websites using HTML, CSS, and JavaScript.</li>
+							<li><b>Mobile Apps:</b><br>Crafting simple and fun mobile applications using <a href="https://developer.android.com/studio" target="_blank" title="Android Studio">Android Studio <i class="fa-solid fa-arrow-up-right-from-square"></i></a>, making everyday tasks easier and more enjoyable.</li>
+							<li><b>Game Development:</b><br>Building small games and interactive experiences with <a href="https://unity.com/" target="_blank" title="Unity">Unity <i class="fa-solid fa-arrow-up-right-from-square"></i></a>, combining creativity with coding to bring fun ideas to reality.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="empty"></div>
+			</div>
+
+			<div class="row">
+				<div class="empty"></div>
+				<div class="right">
+					<div class="text languages">
+						<h2>Languages</h2>
+						<i class="fa-brands fa-java"> JAVA</i>
+						<i class="fa-brands fa-python"> PYTHON</i>
+						<i class="fa-brands fa-html5"> HTML</i>
+						<i class="fa-brands fa-css3-alt"> CSS</i>
+						<i class="fa-brands fa-js"> JavaScript</i>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="left">
+					<div class="text">
+						<h2>GitHub Stats</h2>
+						<img loading="lazy" class="image" alt="Github Stats" width="650" height="256" src="https://githubstats.casiebarie.dev/api?username=casiebarie&show_icons=true&theme=radical&include_all_commits=true&rank_icon=github&text_color=a8a8a8&icon_color=79afff&hide_title=true&hide_border=true&text_bold=false&bg_color=00000000&card_width=450">
+					</div>
+				</div>
+				<div class="empty"></div>
 			</div>
 		</div>
 	</div>
-	<div data-include="/Assets/footer" data-js="false"></div>
+	<div data-include="/assets/footer" data-js="false"></div>
 </div>
-<script src="/Assets/default.js"></script>
+<ul id="circles"></ul>
+<script src="/assets/js/default.js"></script>
 </body>
 </html>

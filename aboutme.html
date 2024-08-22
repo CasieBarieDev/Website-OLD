@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CasieBarie Development</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Some information about me.">
+	<link href="/images/mascot.webp" rel="icon">
+	<link href="/assets/css/default.css" rel="stylesheet" type="text/css"/>
+	<link href="/assets/css/form.css" rel="stylesheet" type="text/css"/>
+	<script defer src="https://kit.fontawesome.com/0c4268d390.js" crossorigin="anonymous"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<style>
+		form button {
+			padding: 10px 30px;
+			background: transparent;
+			color: var(--font-color-gray);
+			border: 2px solid var(--gray-color);
+			border-radius: 9px;
+			cursor: no-drop;
+			width: 100%;
+			transition: border-color .3s;
+			-webkit-transition: border-color .3s;
+			-moz-transition: border-color .3s;
+			-o-transition: border-color .3s;
+		}
+
+		form button.enabled {color: var(--primary-color);}
+
+		button.enabled:hover {
+			border-color: var(--secondary-color);
+			cursor: pointer;
+		}
+
+		@keyframes shake {
+			0%, 100% {transform: translateX(5px);}
+			10%, 30%, 50%, 70%, 90% {transform: translateX(-5px);}
+			20%, 40%, 60%, 80% {transform: translateX(5px);}
+		}
+
+		@-webkit-keyframes shake {
+			0%, 100% {-webkit-transform: translateX(5px);}
+			10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-5px);}
+			20%, 40%, 60%, 80% {-webkit-transform: translateX(5px);}
+		}
+
+		@-moz-keyframes shake {
+			0%, 100% {-moz-transform: translateX(5px);}
+			10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-5px);}
+			20%, 40%, 60%, 80% {-moz-transform: translateX(5px);}
+		}
+
+		@-o-keyframes shake {
+			0%, 100% {-o-transform: translateX(5px);}
+			10%, 30%, 50%, 70%, 90% {-o-transform: translateX(-5px);}
+			20%, 40%, 60%, 80% {-o-transform: translateX(5px);}
+		}
+	</style>
+</head>
+<body>
+<div id="body" data-currentnav="ABOUT ME">
+	<div data-include="/assets/menu" data-js="false"></div>
+	<div id="wrap">
+		<div id="page">
+			<div class="row top">
+				<div class="left">
+					<img src="/images/profilepic.webp" alt="Logo" width="1800" height="1800"/>
+				</div>
+				<div class="right">
+					<div class="text">
+						<h1>About Me</h1>
+						<p>
+							Hello! I'm Cas Barnard, a <span id="age" content="calcage()"></span>-year-old software developer from the Netherlands, driven by a passion for technology and innovation. My journey into the world of coding started at a young age, and I've been captivated by the endless possibilities it offers ever since.<br><br>
+						</p>
+						<p class="gray">
+							If you want to know more about me you can ask below or join the <a href="https://discord.gg/ZptCBHeHyg" target="_blank" title="Discord Server">Discord Server <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.
+						</p>
+					</div>
+				</div>
+			</div>
+			<span id="down-button"><span></span></span>
+			<div class="row" id="scrollto">
+				<div class="left">
+					<div class="text">
+						<h2>Personal Life</h2>
+						<p>
+							Outside the world of coding, I work as a technician in theaters, where I get to combine my love for technology with the magic of live performances. This role allows me to be part of the creative process behind the scenes, ensuring that every show runs smoothly and looks spectacular.<br><br>
+						</p>
+						<p class="gray">
+							When I'm not working or coding, I love hanging out with friends. Whether we're exploring new places or just relaxing together, these moments are invaluable and provide a great balance to my tech-focused life. I also enjoy editing videos for my friends, capturing and enhancing our fun memories.<br><br>
+							In my free time, I like to walk with my dog, Billy. These walks are a great way to relax and enjoy the outdoors. I also have a wonderful girlfriend who shares many of my interests and supports me in my endeavors.<br><br>
+							Swimming is another passion of mine. I find that swimming not only helps me maintain a healthy lifestyle but also clears my mind, making me more focused and productive when I return to my coding projects.
+						</p>
+					</div>
+				</div>
+				<div class="right">
+					<img src="/images/billy.webp" alt="Billy" width="410" height="410"/>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="center">
+					<div class="text">
+						<h2>Contact Me</h2>
+						<form action="https://formspree.io/f/meqdywyz" method="POST">
+							<div class="form">
+								<input class="input" type="text" id="name" name="Name" maxlength="32" required>
+								<span class="count">0/32</span>
+								<label for="name"><span class="required">* </span>Name</label>
+							</div>
+							<div class="form-inline">
+								<div class="form">
+									<input class="input" type="email" id="email" name="Email" maxlength="320" required>
+									<label for="email"><span class="required">* </span>Email</label>
+								</div>
+								<p>OR</p>
+								<div class="form">
+									<input class="input" type="text" id="discord" name="Discord" pattern="^[a-z0-9_]{2,32}" required>
+									<label for="discord"><span class="required">* </span>Discord</label>
+								</div>
+							</div>
+							<div class="form">
+								<select class="input" id="topics" name="Topic" required>
+									<option value="" selected disabled></option>
+									<option value="Minecraft Plugins">Minecraft Plugins</option>
+									<option value="Discord Bots">Discord Bots</option>
+									<option value="Other Projects">Other Projects</option>
+									<option value="This Website">This Website</option>
+									<option value="About Me (CasieBarie)">About Me (CasieBarie)</option>
+								</select>
+								<label for="topics"><span class="required">* </span>Topic</label>
+							</div>
+							<div class="form">
+								<textarea class="input" id="message" name="Message" cols="30" rows="6" maxlength="500" required></textarea>
+								<span class="count">0/500</span>
+								<label for="message"><span class="required">* </span>Message</label>
+							</div>
+							<button id="submit-btn" type="button">Send Message</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-include="/assets/footer" data-js="false"></div>
+</div>
+<ul id="circles"></ul>
+<script src="/assets/js/aboutme.js"></script>
+<script src="/assets/js/default.js"></script>
+</body>
+</html>
