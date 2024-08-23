@@ -12,6 +12,7 @@
 	overflow: hidden;
 	background: black;
 	transition: opacity .3s ease-in-out;
+	height: fit-content;
 }
 
 .project .image {

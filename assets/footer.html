@@ -93,15 +93,79 @@
 		footer .socials a:nth-child(4) {animation-delay: .4s; -webkit-animation-delay: .4s; -moz-animation-delay: .4s; -o-animation-delay: .4s;}
 		footer .socials a:nth-child(5) {animation-delay: .5s; -webkit-animation-delay: .5s; -moz-animation-delay: .5s; -o-animation-delay: .5s;}
 		footer .socials a:nth-child(6) {animation-delay: .6s; -webkit-animation-delay: .6s; -moz-animation-delay: .6s; -o-animation-delay: .6s;}
-		footer .socials a:nth-child(7) {animation-delay: .7s; -webkit-animation-delay: .7s; -moz-animation-delay: .7s; -o-animation-delay: .7s;}
 
 		/* GITHUB */ footer .socials a:nth-child(1):hover, footer .socials a:nth-child(1):hover .tooltip {color: #e6edf3; text-shadow: 0 0 10px #e6edf3, 0 0 20px #e6edf3, 0 0 30px #e6edf3;}
-		/* PAYPAL */ footer .socials a:nth-child(2):hover, footer .socials a:nth-child(2):hover .tooltip {color: #009cde; text-shadow: 0 0 10px #009cde, 0 0 20px #009cde, 0 0 30px #009cde;}
+		/* SPIGOT */ footer .socials a:nth-child(2):hover, footer .socials a:nth-child(2):hover .tooltip {color: #db8522; text-shadow: 0 0 10px #db8522, 0 0 20px #db8522, 0 0 30px #db8522;}
 		/* YOUTUBE */ footer .socials a:nth-child(3):hover, footer .socials a:nth-child(3):hover .tooltip {color: #cc181e; text-shadow: 0 0 10px #cc181e, 0 0 20px #cc181e, 0 0 30px #cc181e;}
 		/* INSTAGRAM */ footer .socials a:nth-child(4):hover, footer .socials a:nth-child(4):hover .tooltip {color: #ec0075; text-shadow: 0 0 10px #ec0075, 0 0 20px #ec0075, 0 0 30px #ec0075;}
-		/* SPIGOT */ footer .socials a:nth-child(5):hover, footer .socials a:nth-child(5):hover .tooltip {color: #db8522; text-shadow: 0 0 10px #db8522, 0 0 20px #db8522, 0 0 30px #db8522;}
-		/* TRELLO */ footer .socials a:nth-child(6):hover, footer .socials a:nth-child(6):hover .tooltip {color: #51e898; text-shadow: 0 0 10px #51e898, 0 0 20px #51e898, 0 0 30px #51e898;}
-		/* DISCORD */ footer .socials a:nth-child(7):hover, footer .socials a:nth-child(7):hover .tooltip {color: #5865F2; text-shadow: 0 0 10px #5865F2, 0 0 20px #5865F2, 0 0 30px #5865F2;}
+		/* TRELLO */ footer .socials a:nth-child(5):hover, footer .socials a:nth-child(5):hover .tooltip {color: #51e898; text-shadow: 0 0 10px #51e898, 0 0 20px #51e898, 0 0 30px #51e898;}
+		/* DISCORD */ footer .socials a:nth-child(6):hover, footer .socials a:nth-child(6):hover .tooltip {color: #5865F2; text-shadow: 0 0 10px #5865F2, 0 0 20px #5865F2, 0 0 30px #5865F2;}
+
+		footer .donate {
+			margin: 0 auto 20px;
+			width: 140px;
+			height: 40px;
+			border: none;
+			border-radius: 10px;
+			background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a) left;
+			background-size: 250%;
+			color: #ffd277;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: background-position 1s;
+			overflow: hidden;
+			text-align: center;
+			animation: shinen 3s infinite linear;
+		}
+
+		footer .donate i {
+			color: #009cde;
+			font-size: large;
+			margin: 10px;
+			transition: text-shadow 1s;
+		}
+
+		footer .donate span {
+			color: #ffd277;
+			font-weight: bold;
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 97%;
+			height: 90%;
+			border-radius: 8px;
+			transition: background-size 1s;
+			background-color: rgba(0, 0, 0, 0.842);
+			background-size: 200%;
+		}
+
+		footer .donate:hover span i {
+			text-shadow: 0 0 10px #009cde, 0 0 20px #009cde, 0 0 30px #009cde;
+		}
+
+		@keyframes shinen {
+			from {background-position: left;}
+			to {background-position: right;}
+		}
+
+		@-webkit-keyframes shinen {
+			from {background-position: left;}
+			to {background-position: right;}
+		}
+
+		@-moz-keyframes shinen {
+			from {background-position: left;}
+			to {background-position: right;}
+		}
+
+		@-o-keyframes shinen {
+			from {background-position: left;}
+			to {background-position: right;}
+		}
 
 		footer .copyright {
 			margin-top: 10px;
@@ -163,9 +227,9 @@
 				<i class="fa-brands fa-github"></i>
 				<div class="tooltip">GitHub</div>
 			</a>
-			<a href="https://www.paypal.com/donate/?hosted_button_id=PGLMKJEJRL6XN" aria-label="PayPal" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=PGLMKJEJRL6XN','PayPal', 'width=500,height=500,scrollbars=no,toolbar=no,location=no'); return false">
-				<i class="fa-brands fa-paypal"></i>
-				<div class="tooltip">PayPal</div>
+			<a href="https://www.spigotmc.org/members/casiebarie.533954/" aria-label="Spigot" target="_blank">
+				<i class="fa-solid fa-faucet-drip"></i>
+				<div class="tooltip">Spigot</div>
 			</a>
 			<a href="https://www.youtube.com/@casiebariedevelopment" aria-label="YouTube" target="_blank">
 				<i class="fa-brands fa-youtube"></i>
@@ -175,10 +239,7 @@
 				<i class="fa-brands fa-instagram"></i>
 				<div class="tooltip">Instagram</div>
 			</a>
-			<a href="https://www.spigotmc.org/members/casiebarie.533954/" aria-label="Spigot" target="_blank">
-				<i class="fa-solid fa-faucet-drip"></i>
-				<div class="tooltip">Spigot</div>
-			</a>
+
 			<a href="https://trello.com/w/casiebariedevelopment" aria-label="Trello" target="_blank">
 				<i class="fa-brands fa-trello"></i>
 				<div class="tooltip">Trello</div>
@@ -188,6 +249,7 @@
 				<div class="tooltip">Discord</div>
 			</a>
 		</div>
+		<button class="donate" onclick="window.open('https://www.paypal.com/donate/?hosted_button_id=PGLMKJEJRL6XN','PayPal', 'width=500,height=500,scrollbars=no,toolbar=no,location=no'); return false"><span><i class="fa-brands fa-paypal"></i>DONATE<i class="fa-brands fa-paypal"></i></span></button>
 		<div class="copyright">
 			<div class="wrap">
 				<div class="one">© 2021-2024 - CasieBarie</div>

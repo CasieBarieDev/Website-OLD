@@ -22,8 +22,7 @@ function loaded() {
     })
 
     copy();
-
-
+    for(let i = 0; i < 10; i++) {$('#circles').append('<li></li>');}
 }
 
 function copy() {
