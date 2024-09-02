@@ -139,17 +139,17 @@
 			-webkit-transition: all .5s ease;
 			-moz-transition: all .5s ease;
 			-o-transition: all .5s ease;
-			font-size: clamp(1ex, 4vw, 10ex);
+			font-size: clamp(1ex, 7vw, 10ex);
 			text-wrap: nowrap;
 		}
 
-		nav .wrapper ul li a {
+		nav .wrapper ul li a span{
 			color: var(--font-color);
 			text-decoration: none;
 			position: relative;
 		}
 
-		nav .wrapper ul li a:after {
+		nav .wrapper ul li a span:after {
 			content: "";
 			position: absolute;
 			width: 101%;
@@ -171,7 +171,7 @@
 			-o-transition: transform 0.25s ease-out;
 		}
 
-		nav .wrapper ul li a:hover:after {
+		nav .wrapper ul li a:hover span:after {
 			transform: scaleX(1);
 			-webkit-transform: scaleX(1);
 			-moz-transform: scaleX(1);
@@ -182,7 +182,7 @@
 			-o-transform-origin: bottom left;
 		}
 
-		nav .wrapper ul li a.current {
+		nav .wrapper ul li a span.current {
 			text-decoration: underline var(--secondary-color);
 		}
 
@@ -197,12 +197,6 @@
 			color: var(--font-color-highlight);
 			min-width: 1.5em;
 		}
-
-		@media (max-width: 700px) {
-			nav .wrapper ul li {
-				font-size: 2em;
-			}
-		}
 	</style>
 </head>
 <body>
@@ -215,11 +209,11 @@
 	</label>
 	<div class="wrapper">
 		<ul class="menu">
-			<li><i class="fa fa-house"></i> <a class="menu-item" href="/">HOME</a></li>
-			<li><i class="fa-solid fa-cubes"></i> <a class="menu-item" href="/minecraft">MINECRAFT PROJECTS</a></li>
-			<li><i class="fa-brands fa-discord"></i> <a class="menu-item" href="/discord">DISCORD BOTS</a></li>
-			<li><i class="fa-solid fa-bars-progress"></i> <a class="menu-item" href="/other">OTHER PROJECTS</a></li>
-			<li><i class="fa-solid fa-user-large"></i> <a class="menu-item" href="/aboutme">ABOUT ME</a></li>
+			<li><a class="menu-item" href="/"><i class="fa fa-house"></i> <span>HOME</span></a></li>
+			<li><a class="menu-item" href="/minecraft"><i class="fa-solid fa-cubes"></i> <span>MINECRAFT PROJECTS</span></a></li>
+			<li><a class="menu-item" href="/discord"><i class="fa-brands fa-discord"></i> <span>DISCORD BOTS</span></a></li>
+			<li><a class="menu-item" href="/other"><i class="fa-solid fa-bars-progress"></i> <span>OTHER PROJECTS</span></a></li>
+			<li><a class="menu-item" href="/aboutme"><i class="fa-solid fa-user-large"></i> <span>ABOUT ME</span></a></li>
 		</ul>
 	</div>
 </nav>
@@ -241,7 +235,7 @@
 	const body = $('[data-currentnav]');
 	$.each(body, function () {
 		const toHighlightName = $(this).data('currentnav');
-		$.each($('.menu-item'), function () {
+		$.each($('.menu-item span'), function () {
 			if(this.innerHTML === toHighlightName) {
 				this.className += ' current';
 			}
