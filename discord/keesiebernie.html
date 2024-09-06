@@ -9,6 +9,49 @@
 	<link href="/assets/css/default.css" rel="stylesheet"/>
 	<script defer src="https://kit.fontawesome.com/0c4268d390.js" crossorigin="anonymous"></script>
 	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<style>
+		.collapsible {
+			color: white;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: clamp(3ex, 4vw, 5ex);
+			font-weight: bold;
+			display: block;
+			text-decoration: underline var(--primary-color);
+			border-radius: 25px;
+			margin-bottom: 5px;
+			background: transparent;
+		}
+
+		.collapsible:after {
+			content: '\002B';
+			font-weight: bold;
+			float: right;
+			margin-left: 5px;
+		}
+
+		.collapsible-active:after {
+			content: "\2212";
+		}
+
+		.content {
+			padding: 0 18px;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height .3s ease-out;
+			text-align: left;
+			border-radius: 25px;
+			margin-bottom: 5px;
+		}
+
+		.contenttext {
+			padding: 18px 0;
+		}
+	</style>
 </head>
 <body>
 <div id="background" style="background-image: url('/images/discord/discord.webp');"></div>
@@ -34,11 +77,160 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="row bottom">
+				<div class="center left">
+					<div class="text">
+						<button class="collapsible">Terms Of Service</button>
+						<div class="content" id="termsofservice">
+							<div class="contenttext">
+								<p class="gray">
+									Effective Date: 06-09-2024<br>
+									Last Updated: 06-09-2024<br><br>
+								</p>
+								<h3>1. Introduction</h3>
+								<p>KeesieBernie is a private Discord moderation bot designed to assist server administrators and moderators in managing server activities and maintaining community standards. By using KeesieBernie, you agree to abide by these Terms of Use. If you do not agree, you should not use the bot.</p>
+								<br><br>
+								<h3>2. Access and Use</h3>
+								<ol>
+									<li><b>Private Access:</b> KeesieBernie is intended for private use only and is not publicly available. Access is restricted to authorized servers and users.</li>
+									<li><b>User Responsibilities:</b> By using KeesieBernie, you agree to:
+										<ul>
+											<li>Use the bot in accordance with all applicable laws and Discord's Terms of Service.</li>
+											<li>Not use the bot for any illegal, harmful, or malicious activities.</li>
+											<li>Follow any server-specific rules established by server administrators.</li>
+										</ul>
+									</li>
+									<li><b>Prohibited Use:</b> You are prohibited from using KeesieBernie to:
+										<ul>
+											<li>Harass, abuse, or intimidate other users.</li>
+											<li>Engage in spamming, phishing, or other disruptive behaviors.</li>
+											<li>Circumvent or attempt to bypass server moderation controls.</li>
+										</ul>
+									</li>
+								</ol>
+								<br><br>
+								<h3>3. Data Collection and Privacy</h3>
+								<ol>
+									<li><b>Data Handling:</b> KeesieBernie may collect and process data such as messages, user IDs, and activity logs for the purpose of moderation. The data is used solely to perform the bot’s functions and will not be shared with third parties unless required by law.</li>
+									<li><b>Data Security:</b> Reasonable measures are taken to ensure the security of data collected by KeesieBernie. However, no system is completely secure, and we cannot guarantee absolute security.</li>
+									<li><b>Data Retention:</b> Data is retained only as long as necessary to fulfill moderation functions and may be deleted upon request by the server owner or as deemed necessary.</li>
+								</ol>
+								<br><br>
+								<h3>4. Limitations and Disclaimers</h3>
+								<ol>
+									<li><b>No Warranties:</b> KeesieBernie is provided “as is” without any warranties, express or implied. We do not guarantee the accuracy, reliability, or performance of the bot.</li>
+									<li><b>Limitation of Liability:</b> We are not liable for any direct, indirect, incidental, special, or consequential damages resulting from the use of KeesieBernie, including but not limited to data loss, service disruption, or unauthorized access.</li>
+									<li><b>Bot Availability:</b> We reserve the right to modify, suspend, or discontinue KeesieBernie at any time without notice.</li>
+								</ol>
+								<br><br>
+								<h3>5. Changes to the Terms</h3>
+								<p>We may update these Terms of Use from time to time. Changes will be communicated to authorized users, and continued use of KeesieBernie after changes have been made constitutes acceptance of the revised terms.</p>
+								<br><br>
+								<h3>6. Contact Information</h3>
+								<p>For questions or concerns regarding these Terms of Use or KeesieBernie's operation, please contact the server administrator or the bot owner in the <a href="https://discord.gg/ZptCBHeHyg" target="_blank" title="Discord Server" class="white">CasieBarie Development Discord Server <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.</p>
+								<br><br>
+								<p class="gray">This document is intended to outline the basic rules and guidelines for using KeesieBernie. For any specific issues not covered here, please reach out to the appropriate contact listed above.</p>
+							</div>
+						</div>
+						<button class="collapsible">Privacy Policy</button>
+						<div class="content" id="privacypolicy">
+							<div class="contenttext">
+								<p class="gray">
+									Effective Date: 06-09-2024<br>
+									Last Updated: 06-09-2024<br><br>
+								</p>
+								<h3>1. Introduction</h3>
+								<p>This Privacy Policy describes how KeesieBernie, a private Discord moderation bot, collects, uses, and protects user data. By using KeesieBernie, you agree to the collection and use of information in accordance with this policy.</p>
+								<br><br>
+								<h3>2. Data Collection</h3>
+								<ol>
+									<li><b>Types of Data Collected:</b> KeesieBernie may collect the following types of data to perform its moderation functions:
+										<ul>
+											<li><b>User Data:</b> Discord usernames, user IDs, roles, and permissions.</li>
+											<li><b>Message Data:</b> Messages sent in the server, including text, links, and attachments if required for moderation purposes.</li>
+											<li><b>Server Data:</b> Information about the server, such as server name, ID, and channel data.</li>
+										</ul>
+									</li>
+									<li><b>Collection Methods:</b> Data is collected directly from Discord’s API as users interact with the server and the bot.</li>
+								</ol>
+								<br><br>
+								<h3>3. Use of Data</h3>
+								<ol>
+									<li><b>Purpose of Data Use:</b> Data collected by KeesieBernie is used for:
+										<ul>
+											<li>Monitoring and moderating server activities.</li>
+											<li>Enforcing server rules and preventing abuse.</li>
+											<li>Generating logs and reports for server administrators.</li>
+										</ul>
+									</li>
+									<li><b>No Commercial Use:</b> Data collected by KeesieBernie will never be sold, rented, or used for commercial purposes.</li>
+								</ol>
+								<br><br>
+								<h3>4. Data Sharing and Disclosure</h3>
+								<ol>
+									<li><b>No Unauthorized Sharing:</b> Data is not shared with third parties except under the following conditions:
+										<ul>
+											<li>With server administrators for moderation purposes.</li>
+											<li>When required by law or in response to valid legal requests, such as subpoenas or court orders.</li>
+										</ul>
+									</li>
+									<li><b>Collaborators and Developers:</b> Limited data access may be granted to developers or collaborators solely for maintenance and improvement of the bot, subject to confidentiality agreements.</li>
+								</ol>
+								<br><br>
+								<h3>5. Data Security</h3>
+								<ol>
+									<li><b>Security Measures:</b> KeesieBernie employs reasonable security measures to protect data against unauthorized access, alteration, disclosure, or destruction. This includes encryption, secure storage, and access controls.</li>
+									<li><b>No Absolute Security:</b> While we strive to protect your data, no system is completely secure. We cannot guarantee the absolute security of data collected by KeesieBernie.</li>
+								</ol>
+								<br><br>
+								<h3>6. Data Retention</h3>
+								<ol>
+									<li><b>Retention Period:</b> Data is retained only as long as necessary to perform the bot’s functions and will be deleted periodically or upon request by the server owner.</li>
+									<li><b>User Rights:</b> Server owners or authorized administrators can request the deletion or review of specific data collected by KeesieBernie by contacting the bot owner.</li>
+								</ol>
+								<br><br>
+								<h3>7. User Rights and Control</h3>
+								<ol>
+									<li><b>Access and Correction:</b> Server administrators can access and request corrections to data collected by KeesieBernie. User-specific data can be reviewed by server owners upon request.</li>
+									<li><b>Opt-Out:</b> Users who do not wish to have their data collected by KeesieBernie must leave the server where the bot is active. KeesieBernie cannot selectively exclude specific users from data collection due to its design as a server moderation tool.</li>
+								</ol>
+								<br><br>
+								<h3>8. Changes to This Privacy Policy</h3>
+								<p>We may update this Privacy Policy periodically. Any changes will be communicated to server administrators, and continued use of KeesieBernie after such updates constitutes acceptance of the revised policy.</p>
+								<br><br>
+								<h3>9. Contact Information</h3>
+								<p>For questions or concerns regarding this Privacy Policy or KeesieBernie's data practices, please contact the bot owner or server administrator in the <a href="https://discord.gg/ZptCBHeHyg" target="_blank" title="Discord Server" class="white">CasieBarie Development Discord Server <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.</p>
+								<br><br>
+								<p class="gray">This Privacy Policy is intended to provide transparency about the data practices of KeesieBernie. Please reach out with any questions or requests related to your data or privacy.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div data-include="/assets/footer" data-js="false"></div>
 </div>
 <ul id="circles"></ul>
 <script src="/assets/js/default.js"></script>
+<script>
+	const coll = document.getElementsByClassName("collapsible");
+	let i;
+
+	for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("collapsible-active");
+			const content = this.nextElementSibling;
+			if (content.style.maxHeight){
+				content.style.maxHeight = null;
+				content.style.border = "";
+			} else {
+				content.style.maxHeight = content.scrollHeight + "px";
+				content.style.border = "2px solid black";
+			}
+		});
+	}
+</script>
 </body>
 </html>
