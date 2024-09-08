@@ -13,7 +13,6 @@
 		.collapsible {
 			color: white;
 			cursor: pointer;
-			padding: 18px;
 			width: 100%;
 			border: none;
 			text-align: left;
@@ -27,22 +26,43 @@
 			background: transparent;
 		}
 
-		.collapsible:after {
-			content: '\002B';
+		.collapsible-icon {
 			font-weight: bold;
 			float: right;
-			margin-left: 5px;
+			margin-right: 1em;
+			display: inline-block;
+			position: relative;
 		}
 
-		.collapsible-active:after {
-			content: "\2212";
+		.collapsible-icon::before, .collapsible-icon::after {
+			content: "";
+			position: absolute;
+			width: 1em;
+			height: .16em;
+			top: calc( (1em / 2 ) - .08em );
+			background-color: white;
+			transition: .3s all;
+			border-radius: 0.03em;
+		}
+
+		.collapsible-icon::after {
+			transform: rotate(90deg);
+		}
+
+		.collapsible-active .collapsible-icon::after {
+			transform: rotate(180deg);
+		}
+
+
+		.collapsible-active .collapsible-icon::before {
+			transform: rotate(90deg) scale(0);
 		}
 
 		.content {
 			padding: 0 18px;
 			max-height: 0;
 			overflow: hidden;
-			transition: max-height .3s ease-out;
+			transition: all .3s ease-out;
 			text-align: left;
 			border-radius: 25px;
 			margin-bottom: 5px;
@@ -78,10 +98,10 @@
 				</div>
 			</div>
 
-			<div class="row bottom">
-				<div class="center left">
+			<div class="row">
+				<div class="center">
 					<div class="text">
-						<button class="collapsible">Terms Of Service</button>
+						<button class="collapsible">Terms Of Service <span class="collapsible-icon"></span></button>
 						<div class="content" id="termsofservice">
 							<div class="contenttext">
 								<p class="gray">
@@ -133,7 +153,14 @@
 								<p class="gray">This document is intended to outline the basic rules and guidelines for using KeesieBernie. For any specific issues not covered here, please reach out to the appropriate contact listed above.</p>
 							</div>
 						</div>
-						<button class="collapsible">Privacy Policy</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row bottom">
+				<div class="center">
+					<div class="text">
+						<button class="collapsible">Privacy Policy <span class="collapsible-icon"></span></button>
 						<div class="content" id="privacypolicy">
 							<div class="contenttext">
 								<p class="gray">
@@ -224,10 +251,8 @@
 			const content = this.nextElementSibling;
 			if (content.style.maxHeight){
 				content.style.maxHeight = null;
-				content.style.border = "";
 			} else {
 				content.style.maxHeight = content.scrollHeight + "px";
-				content.style.border = "2px solid black";
 			}
 		});
 	}

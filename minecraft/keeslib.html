@@ -156,10 +156,11 @@
 			</div>
 
 			<div class="row bottom">
-				<div class="center-left">
+				<div class="left">
 					<div class="text">
 						<h2>Update Checker</h2>
-						<p>This library also has a fancy <a id="uc-preview">Update Checker <i class="fa-regular fa-image"></i></a>. The ultimate tool for ensuring your plugin users are always up-to-date with the latest features, bug fixes, and improvements.<br><br></p>
+						<p>This library also has a fancy Update Checker. The ultimate tool for ensuring your plugin users are always up-to-date with the latest features, bug fixes, and improvements.<br><br></p>
+
 						<p class="gray">Initialise the update checker using this and specify your Spigot resourceid:</p>
 						<pre><code class="lang-java">new keeslib.updateChecker(Integer recourceID)</code></pre>
 						<p class="gray">After that you can customize your update checker using these methods:</p>
@@ -178,9 +179,12 @@
 						<p class="gray">After the customization you start the updatechecker by calling:</p>
 						<pre><code class="lang-java">.startChecking();</code></pre>
 					</div>
-					<div id="uc-preview-modal" class="modal">
-						<img width="873" height="325" loading="lazy" class="modal-content" id="uc" alt="UpdateChecker" src="/images/minecraft/keeslib/uc.webp">
-						<div id="caption">Preview of the UpdateChecker</div>
+				</div>
+				<div class="right">
+					<img src="/images/minecraft/keeslib/uc.webp" class="modal-image" alt="Music Preview" width="873" height="325"/>
+					<div class="modal">
+						<img class="modal-content" alt="" src="">
+						<div class="modal-caption"></div>
 					</div>
 				</div>
 			</div>
@@ -192,11 +196,6 @@
 <script src="/assets/js/default.js"></script>
 <script src="/assets/js/highlight.js"></script>
 <script>
-	const modal = document.getElementById("uc-preview-modal");
-	const img = document.getElementById("uc-preview");
-	img.onclick = function(){modal.style.display = "block"; toggle()}
-	modal.onclick = function(){modal.style.display = "none"; toggle()}
-
 	if (document.readyState !== 'loading') {snipped();
 	} else {document.addEventListener('DOMContentLoaded', function () {snipped();});}
 	function snipped() {

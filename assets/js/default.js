@@ -23,6 +23,23 @@ function loaded() {
 
     copy();
     for(let i = 0; i < 10; i++) {$('#circles').append('<li></li>');}
+
+    $('.modal-image').each(function() {
+        const $image = $(this);
+        const $modal = $image.next('.modal');
+        const $modalImg = $modal.find('.modal-content');
+        const $caption = $modal.find('.modal-caption');
+        $modalImg.attr('src', $image.attr('src'));
+        $caption.text($image.attr('alt'));
+        $image.on('click', function() {
+            $modal.show();
+            toggle();
+        });
+        $modal.on('click', function() {
+            $modal.hide();
+            toggle();
+        });
+    });
 }
 
 function copy() {

@@ -9,11 +9,6 @@
 	<link href="/assets/css/default.css" rel="stylesheet"/>
 	<script defer src="https://kit.fontawesome.com/0c4268d390.js" crossorigin="anonymous"></script>
 	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<style>
-		#music-preview:hover {
-			cursor: pointer;
-		}
-	</style>
 </head>
 <body>
 <div id="background" style="background-image: url('/images/discord/discord.webp');"></div>
@@ -61,11 +56,11 @@
 					</div>
 				</div>
 				<div class="right">
-					<img src="/images/discord/inosso/music.webp" id="music-preview" alt="Music Preview" width="782" height="354"/>
-				</div>
-				<div id="music-preview-modal" class="modal">
-					<img width="782" height="354" loading="lazy" class="modal-content" alt="Music Preview" src="/images/discord/inosso/music.webp">
-					<div id="caption">Preview of the UpdateChecker</div>
+					<img src="/images/discord/inosso/music.webp" class="modal-image" alt="Music Preview" width="782" height="354"/>
+					<div class="modal">
+						<img class="modal-content" alt="" src="">
+						<div class="modal-caption"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -74,11 +69,5 @@
 </div>
 <ul id="circles"></ul>
 <script src="/assets/js/default.js"></script>
-<script>
-	const modal = document.getElementById("music-preview-modal");
-	const img = document.getElementById("music-preview");
-	img.onclick = function(){modal.style.display = "block"; toggle()}
-	modal.onclick = function(){modal.style.display = "none"; toggle()}
-</script>
 </body>
 </html>
