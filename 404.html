@@ -1,122 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
-	<meta charset="UTF-8">
+	<meta charset=UTF-8>
 	<title>CasieBarie Development</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="This page is not found!">
-	<link href="/images/mascot.webp" rel="icon">
-	<link href="/assets/css/default.css" rel="stylesheet" type="text/css"/>
-	<link href="/assets/css/highlight.css" rel="stylesheet" type="text/css"/>
-	<script defer src="https://kit.fontawesome.com/0c4268d390.js" crossorigin="anonymous"></script>
-	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script>
-		window.onload = () => {
-			const currentURL = window.location.href;
-			const lowerCaseURL = currentURL.toLowerCase();
-			if (currentURL !== lowerCaseURL) {location.replace(lowerCaseURL);}
-		};
-	</script>
-	<style>
-		.title {
-			text-align: center;
-			display: -webkit-box;
-			display: -moz-box;
-			display: -ms-flexbox;
-			display: -webkit-flex;
-			display: flex;
-			-webkit-box-pack: center;
-			-moz-box-pack: center;
-			-ms-flex-pack: center;
-			-webkit-justify-content: center;
-			justify-content: center;
-			-webkit-box-align: center;
-			-moz-box-align: center;
-			-ms-flex-align: center;
-			-webkit-align-items: center;
-			align-items: center;
-		}
-
-		.glitch {
-			font-size: 10em;
-			font-weight: bold;
-			text-transform: uppercase;
-			position: relative;
-			text-shadow: 0.05em 0 0 var(--primary-color), -0.03em -0.04em 0 var(--primary-color), 0.025em 0.04em 0 var(--secondary-color);
-			animation: glitch 725ms infinite;
-			-webkit-animation: glitch 725ms infinite;
-			-moz-animation: glitch 725ms infinite;
-			-o-animation: glitch 725ms infinite;
-		}
-
-		.glitch span {
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-
-		.glitch span:first-child {
-			animation: glitch 500ms infinite;
-			-webkit-animation: glitch 500ms infinite;
-			-moz-animation: glitch 500ms infinite;
-			-o-animation: glitch 500ms infinite;
-			clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-			-webkit-clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-			transform: translate(-0.04em, -0.03em);
-			-webkit-transform: translate(-0.04em, -0.03em);
-			-moz-transform: translate(-0.04em, -0.03em);
-			-o-transform: translate(-0.04em, -0.03em);
-			opacity: 0.75;
-		}
-
-		.glitch span:last-child {
-			animation: glitch 375ms infinite;
-			-webkit-animation: glitch 375ms infinite;
-			-moz-animation: glitch 375ms infinite;
-			-o-animation: glitch 375ms infinite;
-			clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-			-webkit-clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-			transform: translate(0.04em, 0.03em);
-			-webkit-transform: translate(0.04em, 0.03em);
-			-moz-transform: translate(0.04em, 0.03em);
-			-o-transform: translate(0.04em, 0.03em);
-			opacity: 0.75;
-		}
-
-		@keyframes glitch {
-			0%, 15% {text-shadow: 0.05em 0 0 var(--primary-color), -0.03em -0.04em 0 var(--primary-color), 0.025em 0.04em 0 var(--secondary-color);}
-			16%, 49% {text-shadow: -0.05em -0.025em 0 var(--primary-color), 0.025em 0.035em 0 var(--primary-color), -0.05em -0.05em 0 var(--secondary-color);}
-			50%, 99% {text-shadow: 0.05em 0.035em 0 var(--primary-color), 0.03em 0 0 var(--primary-color), 0 -0.04em 0 var(--secondary-color);}
-			100% {text-shadow: -0.05em 0 0 var(--primary-color), -0.025em -0.04em 0 var(--primary-color), -0.04em -0.025em 0 var(--secondary-color);}
-		}
-
-		@-webkit-keyframes glitch {
-			0%, 15% {text-shadow: 0.05em 0 0 var(--primary-color), -0.03em -0.04em 0 var(--primary-color), 0.025em 0.04em 0 var(--secondary-color);}
-			16%, 49% {text-shadow: -0.05em -0.025em 0 var(--primary-color), 0.025em 0.035em 0 var(--primary-color), -0.05em -0.05em 0 var(--secondary-color);}
-			50%, 99% {text-shadow: 0.05em 0.035em 0 var(--primary-color), 0.03em 0 0 var(--primary-color), 0 -0.04em 0 var(--secondary-color);}
-			100% {text-shadow: -0.05em 0 0 var(--primary-color), -0.025em -0.04em 0 var(--primary-color), -0.04em -0.025em 0 var(--secondary-color);}
-		}
-	</style>
+	<meta name=viewport content="width=device-width,initial-scale=1">
+	<meta name=description content="This page is not found!">
+	<link href=/images/mascot.webp rel=icon>
+	<link href=/assets/css/default.css rel=stylesheet type=text/css>
+	<link href=/assets/css/highlight.css rel=stylesheet type=text/css>
+	<script defer src=https://kit.fontawesome.com/0c4268d390.js crossorigin=anonymous></script>
+	<script defer src=https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js></script>
+	<script>window.onload=()=>{var o=window.location.href,a=o.toLowerCase();o!==a&&location.replace(a)}</script>
+	<style>.title{text-align:center;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-box-pack:center;-moz-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-box-align:center;-moz-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center}.glitch{font-size:10em;font-weight:700;text-transform:uppercase;position:relative;text-shadow:.05em 0 0 var(--primary-color),-.03em -.04em 0 var(--primary-color),.025em .04em 0 var(--secondary-color);animation:glitch 725ms infinite;-webkit-animation:glitch 725ms infinite;-moz-animation:glitch 725ms infinite;-o-animation:glitch 725ms infinite}.glitch span{position:absolute;top:0;left:0}.glitch span:first-child{animation:glitch .5s infinite;-webkit-animation:glitch .5s infinite;-moz-animation:glitch .5s infinite;-o-animation:glitch .5s infinite;clip-path:polygon(0 0,100% 0,100% 35%,0 35%);-webkit-clip-path:polygon(0 0,100% 0,100% 35%,0 35%);transform:translate(-.04em,-.03em);-webkit-transform:translate(-.04em,-.03em);-moz-transform:translate(-.04em,-.03em);-o-transform:translate(-.04em,-.03em);opacity:.75}.glitch span:last-child{animation:glitch 375ms infinite;-webkit-animation:glitch 375ms infinite;-moz-animation:glitch 375ms infinite;-o-animation:glitch 375ms infinite;clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);-webkit-clip-path:polygon(0 65%,100% 65%,100% 100%,0 100%);transform:translate(.04em,.03em);-webkit-transform:translate(.04em,.03em);-moz-transform:translate(.04em,.03em);-o-transform:translate(.04em,.03em);opacity:.75}@keyframes glitch{0%,15%{text-shadow:.05em 0 0 var(--primary-color),-.03em -.04em 0 var(--primary-color),.025em .04em 0 var(--secondary-color)}16%,49%{text-shadow:-.05em -.025em 0 var(--primary-color),.025em .035em 0 var(--primary-color),-.05em -.05em 0 var(--secondary-color)}50%,99%{text-shadow:.05em .035em 0 var(--primary-color),.03em 0 0 var(--primary-color),0 -.04em 0 var(--secondary-color)}100%{text-shadow:-.05em 0 0 var(--primary-color),-.025em -.04em 0 var(--primary-color),-.04em -.025em 0 var(--secondary-color)}}@-webkit-keyframes glitch{0%,15%{text-shadow:.05em 0 0 var(--primary-color),-.03em -.04em 0 var(--primary-color),.025em .04em 0 var(--secondary-color)}16%,49%{text-shadow:-.05em -.025em 0 var(--primary-color),.025em .035em 0 var(--primary-color),-.05em -.05em 0 var(--secondary-color)}50%,99%{text-shadow:.05em .035em 0 var(--primary-color),.03em 0 0 var(--primary-color),0 -.04em 0 var(--secondary-color)}100%{text-shadow:-.05em 0 0 var(--primary-color),-.025em -.04em 0 var(--primary-color),-.04em -.025em 0 var(--secondary-color)}}</style>
 </head>
 <body>
-<div id="background" style="background-image: url('/images/code.webp');"></div>
-<div id="body" class="visible">
-	<div data-include="/assets/menu" data-js="false"></div>
-	<div id="wrap">
-		<div id="page">
+<div id=background style=background-image:url(/images/code.webp)></div>
+<div id=body class=visible>
+	<div data-include=/assets/menu data-js=false></div>
+	<div id=wrap>
+		<div id=page>
 			<div class="row top">
-				<div class="left">
+				<div class=left>
 					<div class="text title">
-						<p class="glitch">
-							<span aria-hidden="true">404</span>
+						<p class=glitch>
+							<span aria-hidden=true>404</span>
 							404
-							<span aria-hidden="true">404</span>
+							<span aria-hidden=true>404</span>
 						</p>
 					</div>
 				</div>
-				<div class="right">
-					<div class="text">
-						<pre><code class="lang-js">
+				<div class=right>
+					<div class=text>
+						<pre><code class=lang-js>
 							response.code = 404;
 							this_page.not_fount = true;
 							if(you_spelt_it_wrong) {
@@ -130,10 +45,10 @@
 			</div>
 		</div>
 	</div>
-	<div data-include="/assets/footer" data-js="false"></div>
+	<div data-include=/assets/footer data-js=false></div>
 </div>
-<ul id="circles"></ul>
-<script src="/assets/js/default.js"></script>
-<script src="/assets/js/highlight.js"></script>
+<ul id=circles></ul>
+<script src=/assets/js/default.js></script>
+<script src=/assets/js/highlight.js></script>
 </body>
 </html>

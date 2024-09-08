@@ -1,110 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
-	<meta charset="UTF-8">
+	<meta charset=UTF-8>
 	<title>CasieBarie Development</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Info page about KeesieBernie discord bot.">
-	<link href="/images/mascot.webp" rel="icon">
-	<link href="/assets/css/default.css" rel="stylesheet"/>
-	<script defer src="https://kit.fontawesome.com/0c4268d390.js" crossorigin="anonymous"></script>
-	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<style>
-		.collapsible {
-			color: white;
-			cursor: pointer;
-			width: 100%;
-			border: none;
-			text-align: left;
-			outline: none;
-			font-size: clamp(3ex, 4vw, 5ex);
-			font-weight: bold;
-			display: block;
-			text-decoration: underline var(--primary-color);
-			border-radius: 25px;
-			margin-bottom: 5px;
-			background: transparent;
-		}
-
-		.collapsible-icon {
-			font-weight: bold;
-			float: right;
-			margin-right: 1em;
-			display: inline-block;
-			position: relative;
-		}
-
-		.collapsible-icon::before, .collapsible-icon::after {
-			content: "";
-			position: absolute;
-			width: 1em;
-			height: .16em;
-			top: calc( (1em / 2 ) - .08em );
-			background-color: white;
-			transition: .3s all;
-			border-radius: 0.03em;
-		}
-
-		.collapsible-icon::after {
-			transform: rotate(90deg);
-		}
-
-		.collapsible-active .collapsible-icon::after {
-			transform: rotate(180deg);
-		}
-
-
-		.collapsible-active .collapsible-icon::before {
-			transform: rotate(90deg) scale(0);
-		}
-
-		.content {
-			padding: 0 18px;
-			max-height: 0;
-			overflow: hidden;
-			transition: all .3s ease-out;
-			text-align: left;
-			border-radius: 25px;
-			margin-bottom: 5px;
-		}
-
-		.contenttext {
-			padding: 18px 0;
-		}
-	</style>
+	<meta name=viewport content="width=device-width,initial-scale=1">
+	<meta name=description content="Info page about KeesieBernie discord bot.">
+	<link href=/images/mascot.webp rel=icon>
+	<link href=/assets/css/default.css rel=stylesheet>
+	<script defer src=https://kit.fontawesome.com/0c4268d390.js crossorigin=anonymous></script>
+	<script defer src=https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js></script>
+	<style>.collapsible{color:#fff;cursor:pointer;width:100%;border:none;text-align:left;outline:0;font-size:clamp(3ex,4vw,5ex);font-weight:700;display:block;text-decoration:underline var(--primary-color);border-radius:25px;margin-bottom:5px;background:0 0}.collapsible-icon{font-weight:700;float:right;margin-right:1em;display:inline-block;position:relative}.collapsible-icon::after,.collapsible-icon::before{content:"";position:absolute;width:1em;height:.16em;top:calc((1em / 2) - .08em);background-color:#fff;transition:.3s all;border-radius:.03em}.collapsible-icon::after{transform:rotate(90deg)}.collapsible-active .collapsible-icon::after{transform:rotate(180deg)}.collapsible-active .collapsible-icon::before{transform:rotate(90deg) scale(0)}.content{padding:0 18px;max-height:0;overflow:hidden;transition:all .3s ease-out;text-align:left;border-radius:25px;margin-bottom:5px}.contenttext{padding:18px 0}</style>
 </head>
 <body>
-<div id="background" style="background-image: url('/images/discord/discord.webp');"></div>
-<div id="body" data-currentnav="DISCORD BOTS">
-	<div data-include="/assets/menu" data-js="false"></div>
-	<div id="wrap">
-		<div id="page">
+<div id=background style=background-image:url(/images/discord/discord.webp)></div>
+<div id=body data-currentnav="DISCORD BOTS">
+	<div data-include=/assets/menu data-js=false></div>
+	<div id=wrap>
+		<div id=page>
 			<div class="row top">
-				<div class="left">
-					<img src="/images/discord/keesiebernie.webp" alt="Logo" width="2000" height="2000"/>
+				<div class=left>
+					<img src=/images/discord/keesiebernie.webp alt=Logo width=2000 height=2000>
 				</div>
-				<div class="right">
-					<div class="text">
+				<div class=right>
+					<div class=text>
 						<h1>KeesieBernie</h1>
-						<p><b style="color:red;">In Development</b><br><br></p>
+						<p><b style=color:red>In Development</b><br><br></p>
 						<p>
 							KeesieBernie is currently in development as a comprehensive Discord moderation bot designed to help me manage my discord server efficiently and effectively.<br><br>
 						</p>
-						<p class="gray">
+						<p class=gray>
 							Stay tuned for updates as I progress towards releasing KeesieBernie.
-							<br><br><a href="https://trello.com/b/NkGPP7gV/keesiebernie" class="shield" title="Trello" target="_blank"><img src="https://img.shields.io/badge/Trello-%20-51e898?logo=trello&logoColor=white" alt="Trello" height="18px" width="auto"></a>
+							<br><br><a href=https://trello.com/b/NkGPP7gV/keesiebernie class=shield title=Trello target=_blank><img src="https://img.shields.io/badge/Trello-%20-51e898?logo=trello&logoColor=white" alt=Trello height=18px width=auto></a>
 						</p>
 					</div>
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="center">
-					<div class="text">
-						<button class="collapsible">Terms Of Service <span class="collapsible-icon"></span></button>
-						<div class="content" id="termsofservice">
-							<div class="contenttext">
-								<p class="gray">
+			<div class=row>
+				<div class=center>
+					<div class=text>
+						<button class=collapsible>Terms Of Service <span class=collapsible-icon></span></button>
+						<div class=content id=termsofservice>
+							<div class=contenttext>
+								<p class=gray>
 									Effective Date: 06-09-2024<br>
 									Last Updated: 06-09-2024<br><br>
 								</p>
@@ -148,9 +86,9 @@
 								<p>We may update these Terms of Use from time to time. Changes will be communicated to authorized users, and continued use of KeesieBernie after changes have been made constitutes acceptance of the revised terms.</p>
 								<br><br>
 								<h3>6. Contact Information</h3>
-								<p>For questions or concerns regarding these Terms of Use or KeesieBernie's operation, please contact the server administrator or the bot owner in the <a href="https://discord.gg/ZptCBHeHyg" target="_blank" title="Discord Server" class="white">CasieBarie Development Discord Server <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.</p>
+								<p>For questions or concerns regarding these Terms of Use or KeesieBernie's operation, please contact the server administrator or the bot owner in the <a href=https://discord.gg/ZptCBHeHyg target=_blank title="Discord Server" class=white>CasieBarie Development Discord Server <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.</p>
 								<br><br>
-								<p class="gray">This document is intended to outline the basic rules and guidelines for using KeesieBernie. For any specific issues not covered here, please reach out to the appropriate contact listed above.</p>
+								<p class=gray>This document is intended to outline the basic rules and guidelines for using KeesieBernie. For any specific issues not covered here, please reach out to the appropriate contact listed above.</p>
 							</div>
 						</div>
 					</div>
@@ -158,12 +96,12 @@
 			</div>
 
 			<div class="row bottom">
-				<div class="center">
-					<div class="text">
-						<button class="collapsible">Privacy Policy <span class="collapsible-icon"></span></button>
-						<div class="content" id="privacypolicy">
-							<div class="contenttext">
-								<p class="gray">
+				<div class=center>
+					<div class=text>
+						<button class=collapsible>Privacy Policy <span class=collapsible-icon></span></button>
+						<div class=content id=privacypolicy>
+							<div class=contenttext>
+								<p class=gray>
 									Effective Date: 06-09-2024<br>
 									Last Updated: 06-09-2024<br><br>
 								</p>
@@ -227,9 +165,9 @@
 								<p>We may update this Privacy Policy periodically. Any changes will be communicated to server administrators, and continued use of KeesieBernie after such updates constitutes acceptance of the revised policy.</p>
 								<br><br>
 								<h3>9. Contact Information</h3>
-								<p>For questions or concerns regarding this Privacy Policy or KeesieBernie's data practices, please contact the bot owner or server administrator in the <a href="https://discord.gg/ZptCBHeHyg" target="_blank" title="Discord Server" class="white">CasieBarie Development Discord Server <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.</p>
+								<p>For questions or concerns regarding this Privacy Policy or KeesieBernie's data practices, please contact the bot owner or server administrator in the <a href=https://discord.gg/ZptCBHeHyg target=_blank title="Discord Server" class=white>CasieBarie Development Discord Server <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.</p>
 								<br><br>
-								<p class="gray">This Privacy Policy is intended to provide transparency about the data practices of KeesieBernie. Please reach out with any questions or requests related to your data or privacy.</p>
+								<p class=gray>This Privacy Policy is intended to provide transparency about the data practices of KeesieBernie. Please reach out with any questions or requests related to your data or privacy.</p>
 							</div>
 						</div>
 					</div>
@@ -237,25 +175,10 @@
 			</div>
 		</div>
 	</div>
-	<div data-include="/assets/footer" data-js="false"></div>
+	<div data-include=/assets/footer data-js=false></div>
 </div>
-<ul id="circles"></ul>
-<script src="/assets/js/default.js"></script>
-<script>
-	const coll = document.getElementsByClassName("collapsible");
-	let i;
-
-	for (i = 0; i < coll.length; i++) {
-		coll[i].addEventListener("click", function() {
-			this.classList.toggle("collapsible-active");
-			const content = this.nextElementSibling;
-			if (content.style.maxHeight){
-				content.style.maxHeight = null;
-			} else {
-				content.style.maxHeight = content.scrollHeight + "px";
-			}
-		});
-	}
-</script>
+<ul id=circles></ul>
+<script src=/assets/js/default.js></script>
+<script>let coll=document.getElementsByClassName("collapsible"),i;for(i=0;i<coll.length;i++)coll[i].addEventListener("click",function(){this.classList.toggle("collapsible-active");var l=this.nextElementSibling;l.style.maxHeight?l.style.maxHeight=null:l.style.maxHeight=l.scrollHeight+"px"})</script>
 </body>
 </html>
